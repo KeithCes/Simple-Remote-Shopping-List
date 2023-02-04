@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
-		57C5CEF5298ED73E005957DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF4298ED73E005957DE /* ContentView.swift */; };
 		57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF6298ED742005957DE /* Assets.xcassets */; };
 		57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF9298ED742005957DE /* Preview Assets.xcassets */; };
 		57C5CF04298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */; };
@@ -22,6 +21,20 @@
 		57C5CF28298EEC41005957DE /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF27298EEC41005957DE /* FirebaseFunctions */; };
 		57C5CF2A298EEC41005957DE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF29298EEC41005957DE /* FirebaseStorage */; };
 		57C5CF2C298EED7B005957DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */; };
+		57C5CF30298EEEDD005957DE /* PrelogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF2F298EEEDD005957DE /* PrelogView.swift */; };
+		57C5CF32298EEF24005957DE /* PrelogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF31298EEF24005957DE /* PrelogViewModel.swift */; };
+		57C5CF34298EEF4F005957DE /* SRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF33298EEF4F005957DE /* SRButton.swift */; };
+		57C5CF36298EEFD7005957DE /* SRColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF35298EEFD7005957DE /* SRColors.swift */; };
+		57C5CF38298EF017005957DE /* Color+Hexcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF37298EF017005957DE /* Color+Hexcode.swift */; };
+		57C5CF3A298EF096005957DE /* SFProText-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CF39298EF095005957DE /* SFProText-Medium.ttf */; };
+		57C5CF3D298EF139005957DE /* CreateAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF3C298EF139005957DE /* CreateAccountView.swift */; };
+		57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF3E298EF196005957DE /* SRTextbox.swift */; };
+		57C5CF41298EF1ED005957DE /* SRPasswordTextbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */; };
+		57C5CF43298EF221005957DE /* SRText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF42298EF221005957DE /* SRText.swift */; };
+		57C5CF45298EF2D1005957DE /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */; };
+		57C5CF47298EF541005957DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF46298EF541005957DE /* LoginView.swift */; };
+		57C5CF49298EF5B8005957DE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF48298EF5B8005957DE /* LoginViewModel.swift */; };
+		57C5CF4B298EF5FA005957DE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF4A298EF5FA005957DE /* Toast.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +57,6 @@
 /* Begin PBXFileReference section */
 		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
-		57C5CEF4298ED73E005957DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57C5CEF9298ED742005957DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Remote-Shopping-ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +65,21 @@
 		57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITests.swift; sourceTree = "<group>"; };
 		57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		57C5CF2F298EEEDD005957DE /* PrelogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogView.swift; sourceTree = "<group>"; };
+		57C5CF31298EEF24005957DE /* PrelogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewModel.swift; sourceTree = "<group>"; };
+		57C5CF33298EEF4F005957DE /* SRButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRButton.swift; sourceTree = "<group>"; };
+		57C5CF35298EEFD7005957DE /* SRColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRColors.swift; sourceTree = "<group>"; };
+		57C5CF37298EF017005957DE /* Color+Hexcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hexcode.swift"; sourceTree = "<group>"; };
+		57C5CF39298EF095005957DE /* SFProText-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProText-Medium.ttf"; sourceTree = "<group>"; };
+		57C5CF3B298EF0AE005957DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		57C5CF3C298EF139005957DE /* CreateAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountView.swift; sourceTree = "<group>"; };
+		57C5CF3E298EF196005957DE /* SRTextbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRTextbox.swift; sourceTree = "<group>"; };
+		57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRPasswordTextbox.swift; sourceTree = "<group>"; };
+		57C5CF42298EF221005957DE /* SRText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRText.swift; sourceTree = "<group>"; };
+		57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		57C5CF46298EF541005957DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		57C5CF48298EF5B8005957DE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		57C5CF4A298EF5FA005957DE /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +137,25 @@
 		57C5CEF1298ED73E005957DE /* Simple-Remote-Shopping-List */ = {
 			isa = PBXGroup;
 			children = (
-				57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */,
+				57C5CF3B298EF0AE005957DE /* Info.plist */,
+				57C5CF39298EF095005957DE /* SFProText-Medium.ttf */,
 				57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */,
-				57C5CEF4298ED73E005957DE /* ContentView.swift */,
 				57C5CEF6298ED742005957DE /* Assets.xcassets */,
+				57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */,
 				57C5CEF8298ED742005957DE /* Preview Content */,
+				57C5CF2F298EEEDD005957DE /* PrelogView.swift */,
+				57C5CF31298EEF24005957DE /* PrelogViewModel.swift */,
+				57C5CF33298EEF4F005957DE /* SRButton.swift */,
+				57C5CF35298EEFD7005957DE /* SRColors.swift */,
+				57C5CF37298EF017005957DE /* Color+Hexcode.swift */,
+				57C5CF3C298EF139005957DE /* CreateAccountView.swift */,
+				57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */,
+				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
+				57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */,
+				57C5CF42298EF221005957DE /* SRText.swift */,
+				57C5CF46298EF541005957DE /* LoginView.swift */,
+				57C5CF48298EF5B8005957DE /* LoginViewModel.swift */,
+				57C5CF4A298EF5FA005957DE /* Toast.swift */,
 			);
 			path = "Simple-Remote-Shopping-List";
 			sourceTree = "<group>";
@@ -261,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */,
+				57C5CF3A298EF096005957DE /* SFProText-Medium.ttf in Resources */,
 				57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */,
 				57C5CF2C298EED7B005957DE /* GoogleService-Info.plist in Resources */,
 			);
@@ -287,8 +329,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C5CEF5298ED73E005957DE /* ContentView.swift in Sources */,
+				57C5CF38298EF017005957DE /* Color+Hexcode.swift in Sources */,
+				57C5CF36298EEFD7005957DE /* SRColors.swift in Sources */,
+				57C5CF32298EEF24005957DE /* PrelogViewModel.swift in Sources */,
+				57C5CF3D298EF139005957DE /* CreateAccountView.swift in Sources */,
 				57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */,
+				57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */,
+				57C5CF47298EF541005957DE /* LoginView.swift in Sources */,
+				57C5CF41298EF1ED005957DE /* SRPasswordTextbox.swift in Sources */,
+				57C5CF49298EF5B8005957DE /* LoginViewModel.swift in Sources */,
+				57C5CF45298EF2D1005957DE /* CreateAccountViewModel.swift in Sources */,
+				57C5CF34298EEF4F005957DE /* SRButton.swift in Sources */,
+				57C5CF30298EEEDD005957DE /* PrelogView.swift in Sources */,
+				57C5CF43298EF221005957DE /* SRText.swift in Sources */,
+				57C5CF4B298EF5FA005957DE /* Toast.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,7 +505,7 @@
 				DEVELOPMENT_TEAM = X9NZ672UUT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Simple-Remote-Shopping-List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -482,7 +536,7 @@
 				DEVELOPMENT_TEAM = X9NZ672UUT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "Simple-Remote-Shopping-List/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
