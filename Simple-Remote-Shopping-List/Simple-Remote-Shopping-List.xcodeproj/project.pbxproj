@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
+		57C5CEF5298ED73E005957DE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF4298ED73E005957DE /* ContentView.swift */; };
+		57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF6298ED742005957DE /* Assets.xcassets */; };
+		57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF9298ED742005957DE /* Preview Assets.xcassets */; };
+		57C5CF04298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */; };
+		57C5CF0E298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */; };
+		57C5CF10298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */; };
+		57C5CF1E298EEC41005957DE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF1D298EEC41005957DE /* FirebaseAnalytics */; };
+		57C5CF20298EEC41005957DE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF1F298EEC41005957DE /* FirebaseAuth */; };
+		57C5CF22298EEC41005957DE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF21298EEC41005957DE /* FirebaseCrashlytics */; };
+		57C5CF24298EEC41005957DE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF23298EEC41005957DE /* FirebaseDatabase */; };
+		57C5CF26298EEC41005957DE /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF25298EEC41005957DE /* FirebaseDatabaseSwift */; };
+		57C5CF28298EEC41005957DE /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF27298EEC41005957DE /* FirebaseFunctions */; };
+		57C5CF2A298EEC41005957DE /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF29298EEC41005957DE /* FirebaseStorage */; };
+		57C5CF2C298EED7B005957DE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		57C5CF00298ED742005957DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57C5CEE7298ED73E005957DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57C5CEEE298ED73E005957DE;
+			remoteInfo = "Simple-Remote-Shopping-List";
+		};
+		57C5CF0A298ED742005957DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 57C5CEE7298ED73E005957DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 57C5CEEE298ED73E005957DE;
+			remoteInfo = "Simple-Remote-Shopping-List";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
+		57C5CEF4298ED73E005957DE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57C5CEF9298ED742005957DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Remote-Shopping-ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListTests.swift; sourceTree = "<group>"; };
+		57C5CF09298ED742005957DE /* Simple-Remote-Shopping-ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Remote-Shopping-ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITests.swift; sourceTree = "<group>"; };
+		57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		57C5CEEC298ED73E005957DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C5CF26298EEC41005957DE /* FirebaseDatabaseSwift in Frameworks */,
+				57C5CF22298EEC41005957DE /* FirebaseCrashlytics in Frameworks */,
+				57C5CF1E298EEC41005957DE /* FirebaseAnalytics in Frameworks */,
+				57C5CF28298EEC41005957DE /* FirebaseFunctions in Frameworks */,
+				57C5CF2A298EEC41005957DE /* FirebaseStorage in Frameworks */,
+				57C5CF24298EEC41005957DE /* FirebaseDatabase in Frameworks */,
+				57C5CF20298EEC41005957DE /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CEFC298ED742005957DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CF06298ED742005957DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		57C5CEE6298ED73E005957DE = {
+			isa = PBXGroup;
+			children = (
+				57C5CEF1298ED73E005957DE /* Simple-Remote-Shopping-List */,
+				57C5CF02298ED742005957DE /* Simple-Remote-Shopping-ListTests */,
+				57C5CF0C298ED742005957DE /* Simple-Remote-Shopping-ListUITests */,
+				57C5CEF0298ED73E005957DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		57C5CEF0298ED73E005957DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */,
+				57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */,
+				57C5CF09298ED742005957DE /* Simple-Remote-Shopping-ListUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		57C5CEF1298ED73E005957DE /* Simple-Remote-Shopping-List */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */,
+				57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */,
+				57C5CEF4298ED73E005957DE /* ContentView.swift */,
+				57C5CEF6298ED742005957DE /* Assets.xcassets */,
+				57C5CEF8298ED742005957DE /* Preview Content */,
+			);
+			path = "Simple-Remote-Shopping-List";
+			sourceTree = "<group>";
+		};
+		57C5CEF8298ED742005957DE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CEF9298ED742005957DE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		57C5CF02298ED742005957DE /* Simple-Remote-Shopping-ListTests */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */,
+			);
+			path = "Simple-Remote-Shopping-ListTests";
+			sourceTree = "<group>";
+		};
+		57C5CF0C298ED742005957DE /* Simple-Remote-Shopping-ListUITests */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */,
+				57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */,
+			);
+			path = "Simple-Remote-Shopping-ListUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		57C5CEEE298ED73E005957DE /* Simple-Remote-Shopping-List */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57C5CF13298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-List" */;
+			buildPhases = (
+				57C5CEEB298ED73E005957DE /* Sources */,
+				57C5CEEC298ED73E005957DE /* Frameworks */,
+				57C5CEED298ED73E005957DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Simple-Remote-Shopping-List";
+			packageProductDependencies = (
+				57C5CF1D298EEC41005957DE /* FirebaseAnalytics */,
+				57C5CF1F298EEC41005957DE /* FirebaseAuth */,
+				57C5CF21298EEC41005957DE /* FirebaseCrashlytics */,
+				57C5CF23298EEC41005957DE /* FirebaseDatabase */,
+				57C5CF25298EEC41005957DE /* FirebaseDatabaseSwift */,
+				57C5CF27298EEC41005957DE /* FirebaseFunctions */,
+				57C5CF29298EEC41005957DE /* FirebaseStorage */,
+			);
+			productName = "Simple-Remote-Shopping-List";
+			productReference = 57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */;
+			productType = "com.apple.product-type.application";
+		};
+		57C5CEFE298ED742005957DE /* Simple-Remote-Shopping-ListTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57C5CF16298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-ListTests" */;
+			buildPhases = (
+				57C5CEFB298ED742005957DE /* Sources */,
+				57C5CEFC298ED742005957DE /* Frameworks */,
+				57C5CEFD298ED742005957DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57C5CF01298ED742005957DE /* PBXTargetDependency */,
+			);
+			name = "Simple-Remote-Shopping-ListTests";
+			productName = "Simple-Remote-Shopping-ListTests";
+			productReference = 57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		57C5CF08298ED742005957DE /* Simple-Remote-Shopping-ListUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 57C5CF19298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-ListUITests" */;
+			buildPhases = (
+				57C5CF05298ED742005957DE /* Sources */,
+				57C5CF06298ED742005957DE /* Frameworks */,
+				57C5CF07298ED742005957DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57C5CF0B298ED742005957DE /* PBXTargetDependency */,
+			);
+			name = "Simple-Remote-Shopping-ListUITests";
+			productName = "Simple-Remote-Shopping-ListUITests";
+			productReference = 57C5CF09298ED742005957DE /* Simple-Remote-Shopping-ListUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		57C5CEE7298ED73E005957DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					57C5CEEE298ED73E005957DE = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					57C5CEFE298ED742005957DE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 57C5CEEE298ED73E005957DE;
+					};
+					57C5CF08298ED742005957DE = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 57C5CEEE298ED73E005957DE;
+					};
+				};
+			};
+			buildConfigurationList = 57C5CEEA298ED73E005957DE /* Build configuration list for PBXProject "Simple-Remote-Shopping-List" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 57C5CEE6298ED73E005957DE;
+			packageReferences = (
+				57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = 57C5CEF0298ED73E005957DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				57C5CEEE298ED73E005957DE /* Simple-Remote-Shopping-List */,
+				57C5CEFE298ED742005957DE /* Simple-Remote-Shopping-ListTests */,
+				57C5CF08298ED742005957DE /* Simple-Remote-Shopping-ListUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		57C5CEED298ED73E005957DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */,
+				57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */,
+				57C5CF2C298EED7B005957DE /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CEFD298ED742005957DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CF07298ED742005957DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		57C5CEEB298ED73E005957DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C5CEF5298ED73E005957DE /* ContentView.swift in Sources */,
+				57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CEFB298ED742005957DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C5CF04298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57C5CF05298ED742005957DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57C5CF10298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift in Sources */,
+				57C5CF0E298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		57C5CF01298ED742005957DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57C5CEEE298ED73E005957DE /* Simple-Remote-Shopping-List */;
+			targetProxy = 57C5CF00298ED742005957DE /* PBXContainerItemProxy */;
+		};
+		57C5CF0B298ED742005957DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 57C5CEEE298ED73E005957DE /* Simple-Remote-Shopping-List */;
+			targetProxy = 57C5CF0A298ED742005957DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		57C5CF11298ED742005957DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		57C5CF12298ED742005957DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		57C5CF14298ED742005957DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple-Remote-Shopping-List/Preview Content\"";
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		57C5CF15298ED742005957DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Simple-Remote-Shopping-List/Preview Content\"";
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-List";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		57C5CF17298ED742005957DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-Remote-Shopping-List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Simple-Remote-Shopping-List";
+			};
+			name = Debug;
+		};
+		57C5CF18298ED742005957DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simple-Remote-Shopping-List.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Simple-Remote-Shopping-List";
+			};
+			name = Release;
+		};
+		57C5CF1A298ED742005957DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple-Remote-Shopping-List";
+			};
+			name = Debug;
+		};
+		57C5CF1B298ED742005957DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = X9NZ672UUT;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Simple-Remote-Shopping-List";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		57C5CEEA298ED73E005957DE /* Build configuration list for PBXProject "Simple-Remote-Shopping-List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C5CF11298ED742005957DE /* Debug */,
+				57C5CF12298ED742005957DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57C5CF13298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-List" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C5CF14298ED742005957DE /* Debug */,
+				57C5CF15298ED742005957DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57C5CF16298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-ListTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C5CF17298ED742005957DE /* Debug */,
+				57C5CF18298ED742005957DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		57C5CF19298ED742005957DE /* Build configuration list for PBXNativeTarget "Simple-Remote-Shopping-ListUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				57C5CF1A298ED742005957DE /* Debug */,
+				57C5CF1B298ED742005957DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57C5CF1D298EEC41005957DE /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		57C5CF1F298EEC41005957DE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		57C5CF21298EEC41005957DE /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		57C5CF23298EEC41005957DE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		57C5CF25298EEC41005957DE /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		57C5CF27298EEC41005957DE /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		57C5CF29298EEC41005957DE /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 57C5CEE7298ED73E005957DE /* Project object */;
+}
