@@ -46,7 +46,7 @@ struct LoginView: View {
             self.isShowingLogin.toggle()
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(SRColors.sand)
+        .background(SRColors.blue)
         .ignoresSafeArea()
     }
 }

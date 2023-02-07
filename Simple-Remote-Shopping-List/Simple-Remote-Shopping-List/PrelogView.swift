@@ -41,10 +41,10 @@ struct PrelogView: View {
             viewModel.checkUserLoggedIn()
         }
         .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-            //CameraView()
+            LandingPageView()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(SRColors.sand)
+        .background(SRColors.blue)
         .ignoresSafeArea()
     }
 }

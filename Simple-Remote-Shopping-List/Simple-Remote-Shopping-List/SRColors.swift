@@ -9,6 +9,6 @@ import Foundation
 import SwiftUI
 
 struct SRColors {
-    static let sand = Color(hex: "BEA682")
-    static let darkGray = Color(hex: "686868")
+    static let blue = Color(hex: "6350c4")
+    static let white = Color(hex: "ffffff")
 }

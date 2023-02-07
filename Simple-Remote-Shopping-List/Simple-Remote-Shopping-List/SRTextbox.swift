@@ -38,7 +38,7 @@ struct SRTextbox: View {
                 .foregroundColor(Color.gray)
                 .fixedSize(horizontal: false, vertical: true)
                 .background(Rectangle()
-                    .fill(SRColors.darkGray)
+                    .fill(SRColors.white)
                     .frame(height: 46)
                     .frame(maxWidth: .infinity)
                     .cornerRadius(2))

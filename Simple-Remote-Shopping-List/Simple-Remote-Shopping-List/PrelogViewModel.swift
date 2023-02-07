@@ -22,7 +22,7 @@ final class PrelogViewModel: ObservableObject {
     func checkUserLoggedIn() {
         
         // uncomment to log user out
-        try! Auth.auth().signOut()
+        //try! Auth.auth().signOut()
         
         if Auth.auth().currentUser == nil {
             return

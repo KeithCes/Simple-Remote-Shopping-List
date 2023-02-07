@@ -35,9 +35,7 @@ struct CreateAccountView: View {
                     viewModel.checkPostErrorToast()
                     
                     if viewModel.checkIfCreateInfoValid() {
-                        DispatchQueue.main.async {
-                            viewModel.createAccount()
-                        }
+                        viewModel.createAccount()
                     }
                 }
             
@@ -45,9 +43,7 @@ struct CreateAccountView: View {
                 viewModel.checkPostErrorToast()
                 
                 if viewModel.checkIfCreateInfoValid() {
-                    DispatchQueue.main.async {
-                        viewModel.createAccount()
-                    }
+                    viewModel.createAccount()
                 }
             }
             
@@ -58,7 +54,7 @@ struct CreateAccountView: View {
             self.isShowingCreate.toggle()
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(SRColors.sand)
+        .background(SRColors.blue)
         .ignoresSafeArea()
     }
 }

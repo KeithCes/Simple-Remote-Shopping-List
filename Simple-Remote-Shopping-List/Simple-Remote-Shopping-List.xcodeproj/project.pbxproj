@@ -35,6 +35,10 @@
 		57C5CF47298EF541005957DE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF46298EF541005957DE /* LoginView.swift */; };
 		57C5CF49298EF5B8005957DE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF48298EF5B8005957DE /* LoginViewModel.swift */; };
 		57C5CF4B298EF5FA005957DE /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF4A298EF5FA005957DE /* Toast.swift */; };
+		57C5CF4F29918DB7005957DE /* LandingPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF4E29918DB6005957DE /* LandingPageView.swift */; };
+		57C5CF5129918DF2005957DE /* LandingPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */; };
+		57C5CF5329918F44005957DE /* CreateNewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF5229918F44005957DE /* CreateNewListView.swift */; };
+		57C5CF552991CEB4005957DE /* CreateNewListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF542991CEB4005957DE /* CreateNewListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		57C5CF46298EF541005957DE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		57C5CF48298EF5B8005957DE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		57C5CF4A298EF5FA005957DE /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		57C5CF4E29918DB6005957DE /* LandingPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageView.swift; sourceTree = "<group>"; };
+		57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewModel.swift; sourceTree = "<group>"; };
+		57C5CF5229918F44005957DE /* CreateNewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewListView.swift; sourceTree = "<group>"; };
+		57C5CF542991CEB4005957DE /* CreateNewListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +164,10 @@
 				57C5CF46298EF541005957DE /* LoginView.swift */,
 				57C5CF48298EF5B8005957DE /* LoginViewModel.swift */,
 				57C5CF4A298EF5FA005957DE /* Toast.swift */,
+				57C5CF4E29918DB6005957DE /* LandingPageView.swift */,
+				57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */,
+				57C5CF5229918F44005957DE /* CreateNewListView.swift */,
+				57C5CF542991CEB4005957DE /* CreateNewListViewModel.swift */,
 			);
 			path = "Simple-Remote-Shopping-List";
 			sourceTree = "<group>";
@@ -336,9 +348,13 @@
 				57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */,
 				57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */,
 				57C5CF47298EF541005957DE /* LoginView.swift in Sources */,
+				57C5CF4F29918DB7005957DE /* LandingPageView.swift in Sources */,
 				57C5CF41298EF1ED005957DE /* SRPasswordTextbox.swift in Sources */,
+				57C5CF552991CEB4005957DE /* CreateNewListViewModel.swift in Sources */,
 				57C5CF49298EF5B8005957DE /* LoginViewModel.swift in Sources */,
+				57C5CF5329918F44005957DE /* CreateNewListView.swift in Sources */,
 				57C5CF45298EF2D1005957DE /* CreateAccountViewModel.swift in Sources */,
+				57C5CF5129918DF2005957DE /* LandingPageViewModel.swift in Sources */,
 				57C5CF34298EEF4F005957DE /* SRButton.swift in Sources */,
 				57C5CF30298EEEDD005957DE /* PrelogView.swift in Sources */,
 				57C5CF43298EF221005957DE /* SRText.swift in Sources */,
