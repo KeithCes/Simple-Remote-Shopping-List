@@ -103,7 +103,7 @@ struct CreateNewListView: View {
             
             
             SRButton(text: "SAVE", isOutline: false) {
-                
+                viewModel.sendShoppingListFirebase()
             }
             
             Spacer()
