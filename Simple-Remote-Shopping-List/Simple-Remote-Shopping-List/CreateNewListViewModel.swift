@@ -21,7 +21,7 @@ final class CreateNewListViewModel: ObservableObject {
     
     func addItem() {
         guard !self.newItem.isEmpty else { return }
-        self.items.append(self.newItem)
+        self.items.insert(self.newItem, at: 0)
         self.newItem = ""
     }
 }

@@ -34,59 +34,73 @@ struct CreateNewListView: View {
             
             VStack {
                 List {
-                    ForEach(0..<viewModel.items.count, id: \.self) { index in
-                        TextField("", text: $viewModel.items[index], onEditingChanged: { edit in
-                            viewModel.isEditing = edit
-                        })
-                        .foregroundColor(SRColors.blue)
-                        .onTapGesture {
-                            viewModel.selectedItem = viewModel.items[index]
-                        }
-                    }
-                    .onDelete(perform: viewModel.delete)
-                    .listRowBackground(SRColors.white.opacity(0.8))
-                    .padding(.vertical, 5)
-                    
-                    HStack {
-                        ZStack(alignment: .leading) {
-                            if viewModel.newItem.isEmpty {
-                                Text("Enter New Item")
-                                    .foregroundColor(SRColors.white)
-                            }
-                            TextField("", text: $viewModel.newItem)
-                                .foregroundColor(SRColors.blue)
-                                .accentColor(SRColors.blue)
-                                .submitLabel(.return)
-                                .onSubmit {
-                                    viewModel.addItem()
+                    if viewModel.items.count > 0 {
+                        ForEach(0..<viewModel.items.count, id: \.self) { index in
+                            TextField("", text: $viewModel.items[index], onEditingChanged: { edit in
+                                viewModel.isEditing = edit
+                            })
+                            .foregroundColor(SRColors.blue)
+                            .onTapGesture {
+                                if viewModel.items.count > index {
+                                    viewModel.selectedItem = viewModel.items[index]
                                 }
-                        }
-                        Button(action: {
-                            viewModel.addItem()
-                        }, label: {
-                            ZStack {
-                                Rectangle()
-                                    .foregroundColor(SRColors.white)
-                                    .frame(width: 48, height: 48)
-                                    .cornerRadius(48)
-                                Image(systemName: "plus")
-                                    .resizable()
-                                    .frame(width: 15, height: 15)
-                                    .foregroundColor(Color.black)
                             }
-                        })
+                        }
+                        .onDelete(perform: viewModel.delete)
+                        .listRowBackground(SRColors.white.opacity(0.8))
+                        .padding(.vertical, 5)
                     }
-                    .listRowBackground(SRColors.white.opacity(0.5))
+                    else {
+                        Text("ADD A NEW ITEM BELOW!")
+                            .foregroundColor(SRColors.white)
+                            .padding(.leading, 20)
+                            .listRowBackground(SRColors.blue)
+                    }
                 }
-                .listStyle(InsetGroupedListStyle())
-                .listRowBackground(SRColors.white)
-                .scrollContentBackground(.hidden)
+                
+                HStack {
+                    ZStack(alignment: .leading) {
+                        if viewModel.newItem.isEmpty {
+                            Text("Enter New Item")
+                                .foregroundColor(SRColors.white)
+                                .padding(.leading, 20)
+                        }
+                        TextField("", text: $viewModel.newItem)
+                            .padding(.leading, 20)
+                            .foregroundColor(SRColors.blue)
+                            .accentColor(SRColors.blue)
+                            .submitLabel(.done)
+                    }
+                    Button(action: {
+                        viewModel.addItem()
+                    }, label: {
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(SRColors.white)
+                                .frame(width: 48, height: 48)
+                                .cornerRadius(48)
+                            Image(systemName: "plus")
+                                .resizable()
+                                .frame(width: 15, height: 15)
+                                .foregroundColor(Color.black)
+                        }
+                    })
+                    .padding(.trailing, 20)
+                }
                 .background(Rectangle()
-                        .fill(SRColors.white.opacity(0.1))
-                        .cornerRadius(5))
-                .padding(.all, 20)
-                .frame(height: (UIScreen.main.bounds.height / 2 + 100))
+                    .fill(SRColors.white.opacity(0.5))
+                    .cornerRadius(5))
             }
+            .listStyle(InsetGroupedListStyle())
+            .listRowBackground(SRColors.white)
+            .scrollContentBackground(.hidden)
+            .background(Rectangle()
+                .fill(SRColors.white.opacity(0.1))
+                .cornerRadius(10))
+            .padding(.all, 20)
+            .frame(height: (UIScreen.main.bounds.height / 2))
+            
+            
             
             SRButton(text: "SAVE", isOutline: false) {
                 
