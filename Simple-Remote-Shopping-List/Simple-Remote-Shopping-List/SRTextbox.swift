@@ -35,13 +35,13 @@ struct SRTextbox: View {
             TextField(self.placeholderText, text: self.$field)
                 .padding(.leading, 17)
                 .font(.custom("SFProText-Medium", size: 16))
-                .foregroundColor(Color.gray)
+                .foregroundColor(SRColors.blue)
                 .fixedSize(horizontal: false, vertical: true)
                 .background(Rectangle()
-                    .fill(SRColors.white)
+                    .fill(SRColors.white.opacity(0.5))
                     .frame(height: 46)
                     .frame(maxWidth: .infinity)
-                    .cornerRadius(2))
+                    .cornerRadius(10))
                 .onReceive(Just(self.field)) { _ in limitText(self.charLimit) }
                 .multilineTextAlignment(.leading)
         }

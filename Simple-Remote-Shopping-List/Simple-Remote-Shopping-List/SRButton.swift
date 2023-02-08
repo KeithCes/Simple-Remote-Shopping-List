@@ -27,7 +27,7 @@ struct SRButton: View {
             .frame(minHeight: 54, maxHeight: 54)
             .frame(maxWidth: .infinity)
             .background(self.isOutline ? Color.white : Color.black)
-            .cornerRadius(3)
+            .cornerRadius(10)
             .overlay(
                 RoundedRectangle(cornerRadius: 6)
                     .stroke(Color.black)

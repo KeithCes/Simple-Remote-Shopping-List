@@ -38,7 +38,7 @@ struct SRPasswordTextbox: View {
                     .fill(SRColors.white)
                     .frame(height: 46)
                     .frame(maxWidth: .infinity)
-                    .cornerRadius(2))
+                    .cornerRadius(10))
                 .onReceive(Just(self.field)) { _ in limitText(30) }
         }
         .padding(.horizontal, 20)

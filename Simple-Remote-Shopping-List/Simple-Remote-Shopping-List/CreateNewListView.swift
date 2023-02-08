@@ -32,6 +32,29 @@ struct CreateNewListView: View {
             .padding(.top, 50)
             .padding(.leading, 20)
             
+            ZStack {
+                if viewModel.listTitle.isEmpty {
+                    HStack {
+                        Spacer()
+                        Text("New Shopping List")
+                            .foregroundColor(SRColors.white)
+                        Spacer()
+                    }
+                }
+                TextField("", text: $viewModel.listTitle)
+                    .foregroundColor(SRColors.blue)
+                    .accentColor(SRColors.blue)
+                    .submitLabel(.done)
+                    .multilineTextAlignment(.center)
+            }
+            .font(.custom("SFProText-Medium", size: 30))
+            .background(Rectangle()
+                .fill(SRColors.white.opacity(0.5))
+                .frame(height: 46)
+                .frame(maxWidth: .infinity)
+                .cornerRadius(10))
+            .padding(.all, 20)
+            
             VStack {
                 List {
                     if viewModel.items.count > 0 {
