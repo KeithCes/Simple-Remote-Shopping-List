@@ -9,7 +9,7 @@ import Foundation
 import FirebaseAuth
 import FirebaseDatabase
 
-final class CreateNewListViewModel: ObservableObject {
+final class EditShoppingListViewModel: ObservableObject {
     
     @Published var items: [String] = []
     @Published var selectedItem: String = ""
@@ -31,10 +31,14 @@ final class CreateNewListViewModel: ObservableObject {
     
     func sendShoppingListFirebase() {
         let ref = Database.database().reference()
-        let userID = Auth.auth().currentUser!.uid
         
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("listTitle").setValue(self.listTitle)
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("listItems").setValue(self.items)
+        guard let userID = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("title").setValue(self.listTitle)
+        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(self.items)
+        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("ID").setValue(self.listID)
         
         print("order sent to firebase")
     }

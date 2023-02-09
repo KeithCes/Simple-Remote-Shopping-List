@@ -1,5 +1,5 @@
 //
-//  CreateNewListView.swift
+//  EditShoppingListView.swift
 //  Simple-Remote-Shopping-List
 //
 //  Created by Keith C on 2/6/23.
@@ -8,11 +8,13 @@
 import Foundation
 import SwiftUI
 
-struct CreateNewListView: View {
+struct EditShoppingListView: View {
     
-    @StateObject private var viewModel = CreateNewListViewModel()
+    @StateObject private var viewModel = EditShoppingListViewModel()
     
     @Binding var isShowingCreateNewList: Bool
+    
+    @Binding var selectedShoppingList: ShoppingList?
     
     
     var body: some View {
@@ -41,7 +43,7 @@ struct CreateNewListView: View {
                         Spacer()
                     }
                 }
-                TextField("", text: $viewModel.listTitle)
+                TextField(viewModel.listTitle, text: $viewModel.listTitle)
                     .foregroundColor(SRColors.blue)
                     .accentColor(SRColors.blue)
                     .submitLabel(.done)
@@ -130,6 +132,16 @@ struct CreateNewListView: View {
             }
             
             Spacer()
+        }
+        .onAppear {
+            guard let listTitle = self.selectedShoppingList?.title,
+                  let listItems = self.selectedShoppingList?.items,
+                  let listID = self.selectedShoppingList?.ID else {
+                return
+            }
+            viewModel.listTitle = listTitle
+            viewModel.items = listItems
+            viewModel.listID = listID
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)

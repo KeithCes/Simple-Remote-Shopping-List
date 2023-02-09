@@ -7,8 +7,48 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
 
 final class LandingPageViewModel: ObservableObject {
     
-    @Published var isShowingCreateNewList: Bool = false
+    @Published var shoppingLists: [ShoppingList] = []
+    
+    @Published var selectedShoppingList: ShoppingList?
+    
+    @Published var isShowingEditShoppingList: Bool = false
+    
+    func getYourLists() {
+        
+        guard let userID = Auth.auth().currentUser?.uid else {
+            return
+        }
+        
+        let ref = Database.database().reference()
+        
+        ref.child("users").child(userID).child("shoppingLists").observeSingleEvent(of: .value, with: { (snapshot) in
+            
+            guard let snapshot = snapshot.value as? [String: Any] else {
+                return
+            }
+            
+            for snap in snapshot {
+                
+                guard let snapshotDict = snap.value as? [String: Any] else {
+                    return
+                }
+                
+                do {
+                    let jsonData = try JSONSerialization.data(withJSONObject: snapshotDict, options: [])
+                    let shoppingList = try JSONDecoder().decode(ShoppingList.self, from: jsonData)
+                    
+                    self.shoppingLists.append(shoppingList)
+                }
+                catch let error {
+                    print(error)
+                }
+            }
+            
+            print(self.shoppingLists)
+        })
+    }
 }

@@ -16,13 +16,46 @@ struct LandingPageView: View {
     var body: some View {
         VStack {
             
+            SRText(text: "SHOPPING LISTS", fontSize: 30)
+                .padding(.top, 60)
+            
+            VStack {
+                List {
+                    if viewModel.shoppingLists.count > 0 {
+                        ForEach(0..<viewModel.shoppingLists.count, id: \.self) { index in
+                            SRText(text: viewModel.shoppingLists[index].title, fontSize: 16)
+                                .onTapGesture {
+                                    viewModel.selectedShoppingList = viewModel.shoppingLists[index]
+                                    viewModel.isShowingEditShoppingList.toggle()
+                                }
+                        }
+                        .listRowBackground(SRColors.white.opacity(0.8))
+                        .padding(.vertical, 5)
+                    }
+                    else {
+                        Text("ADD A NEW ITEM BELOW!")
+                            .foregroundColor(SRColors.white)
+                            .padding(.leading, 20)
+                            .listRowBackground(SRColors.blue)
+                    }
+                }
+            }
+            .listStyle(InsetGroupedListStyle())
+            .listRowBackground(SRColors.white)
+            .scrollContentBackground(.hidden)
+            .background(Rectangle()
+                .fill(SRColors.white.opacity(0.1))
+                .cornerRadius(10))
+            .padding(.all, 20)
+            .frame(height: (UIScreen.main.bounds.height / 2))
+            
             Spacer()
             
             HStack {
                 Spacer()
                 
                 Button(action: {
-                    viewModel.isShowingCreateNewList.toggle()
+                    viewModel.isShowingEditShoppingList.toggle()
                 }, label: {
                     ZStack {
                         Rectangle()
@@ -39,8 +72,14 @@ struct LandingPageView: View {
                 .padding(.trailing, 16)
             }
         }
-        .fullScreenCover(isPresented: $viewModel.isShowingCreateNewList) {
-            CreateNewListView(isShowingCreateNewList: $viewModel.isShowingCreateNewList)
+        .fullScreenCover(isPresented: $viewModel.isShowingEditShoppingList, onDismiss: {
+            viewModel.selectedShoppingList = nil
+        }) {
+            EditShoppingListView(isShowingCreateNewList: $viewModel.isShowingEditShoppingList,
+                                 selectedShoppingList: $viewModel.selectedShoppingList)
+        }
+        .onAppear{
+            viewModel.getYourLists()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
