@@ -11,9 +11,9 @@ import FirebaseDatabase
 
 final class EditShoppingListViewModel: ObservableObject {
     
-    @Published var items: [String] = []
-    @Published var selectedItem: String = ""
-    @Published var newItem: String = ""
+    @Published var items: [ShoppingListItem] = []
+    @Published var selectedItem: ShoppingListItem?
+    @Published var newItemName: String = ""
     @Published var isEditing = false
     @Published var listTitle: String = ""
     @Published var listID: String = UUID().uuidString
@@ -24,9 +24,11 @@ final class EditShoppingListViewModel: ObservableObject {
     }
     
     func addItem() {
-        guard !self.newItem.isEmpty else { return }
-        self.items.insert(self.newItem, at: 0)
-        self.newItem = ""
+        guard !self.newItemName.isEmpty else {
+            return
+        }
+        self.items.insert(ShoppingListItem(name: self.newItemName, isChecked: false, ID: UUID().uuidString), at: 0)
+        self.newItemName = ""
     }
     
     func sendShoppingListFirebase() {
@@ -36,9 +38,11 @@ final class EditShoppingListViewModel: ObservableObject {
             return
         }
         
+        let itemsCoded = self.items.map { item in item.dictionary ?? [:] }
+        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(itemsCoded)
         ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("title").setValue(self.listTitle)
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(self.items)
         ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("ID").setValue(self.listID)
+
         
         print("order sent to firebase")
     }

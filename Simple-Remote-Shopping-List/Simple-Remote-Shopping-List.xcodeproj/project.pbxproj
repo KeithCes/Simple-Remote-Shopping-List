@@ -40,6 +40,8 @@
 		57C5CF5329918F44005957DE /* EditShoppingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF5229918F44005957DE /* EditShoppingListView.swift */; };
 		57C5CF552991CEB4005957DE /* EditShoppingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF542991CEB4005957DE /* EditShoppingListViewModel.swift */; };
 		57C5CF5729947694005957DE /* ShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF5629947693005957DE /* ShoppingList.swift */; };
+		57C5CF592994906C005957DE /* ShoppingListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF582994906B005957DE /* ShoppingListItem.swift */; };
+		57C5CF5B299493E4005957DE /* Encodable+dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		57C5CF5229918F44005957DE /* EditShoppingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShoppingListView.swift; sourceTree = "<group>"; };
 		57C5CF542991CEB4005957DE /* EditShoppingListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditShoppingListViewModel.swift; sourceTree = "<group>"; };
 		57C5CF5629947693005957DE /* ShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingList.swift; sourceTree = "<group>"; };
+		57C5CF582994906B005957DE /* ShoppingListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItem.swift; sourceTree = "<group>"; };
+		57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+dictionary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		57C5CEE6298ED73E005957DE = {
 			isa = PBXGroup;
 			children = (
+				57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */,
 				57C5CEF1298ED73E005957DE /* Simple-Remote-Shopping-List */,
 				57C5CF02298ED742005957DE /* Simple-Remote-Shopping-ListTests */,
 				57C5CF0C298ED742005957DE /* Simple-Remote-Shopping-ListUITests */,
@@ -171,6 +176,7 @@
 				57C5CF5229918F44005957DE /* EditShoppingListView.swift */,
 				57C5CF542991CEB4005957DE /* EditShoppingListViewModel.swift */,
 				57C5CF5629947693005957DE /* ShoppingList.swift */,
+				57C5CF582994906B005957DE /* ShoppingListItem.swift */,
 			);
 			path = "Simple-Remote-Shopping-List";
 			sourceTree = "<group>";
@@ -350,8 +356,10 @@
 				57C5CF3D298EF139005957DE /* CreateAccountView.swift in Sources */,
 				57C5CF5729947694005957DE /* ShoppingList.swift in Sources */,
 				57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */,
+				57C5CF5B299493E4005957DE /* Encodable+dictionary.swift in Sources */,
 				57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */,
 				57C5CF47298EF541005957DE /* LoginView.swift in Sources */,
+				57C5CF592994906C005957DE /* ShoppingListItem.swift in Sources */,
 				57C5CF4F29918DB7005957DE /* LandingPageView.swift in Sources */,
 				57C5CF41298EF1ED005957DE /* SRPasswordTextbox.swift in Sources */,
 				57C5CF552991CEB4005957DE /* EditShoppingListViewModel.swift in Sources */,

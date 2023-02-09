@@ -61,18 +61,31 @@ struct EditShoppingListView: View {
                 List {
                     if viewModel.items.count > 0 {
                         ForEach(0..<viewModel.items.count, id: \.self) { index in
-                            TextField("", text: $viewModel.items[index], onEditingChanged: { edit in
-                                viewModel.isEditing = edit
-                            })
-                            .foregroundColor(SRColors.blue)
-                            .onTapGesture {
-                                if viewModel.items.count > index {
-                                    viewModel.selectedItem = viewModel.items[index]
+                            HStack {
+                                TextField("", text: $viewModel.items[index].name, onEditingChanged: { edit in
+                                    viewModel.isEditing = edit
+                                })
+                                .foregroundColor(SRColors.blue)
+                                .onTapGesture {
+                                    if viewModel.items.count > index {
+                                        viewModel.selectedItem = viewModel.items[index]
+                                    }
                                 }
+                                .strikethrough(viewModel.items[index].isChecked)
+                                
+                                Spacer()
+                                
+                                Image(systemName: "x.circle")
+                                    .resizable()
+                                    .frame(width: 20, height: 20)
+                                    .foregroundColor(.red)
+                                    .onTapGesture {
+                                        viewModel.items[index].isChecked.toggle()
+                                    }
                             }
+                            .listRowBackground(viewModel.items[index].isChecked ? SRColors.white.opacity(0.4) : SRColors.white.opacity(0.8))
                         }
                         .onDelete(perform: viewModel.delete)
-                        .listRowBackground(SRColors.white.opacity(0.8))
                         .padding(.vertical, 5)
                     }
                     else {
@@ -85,12 +98,12 @@ struct EditShoppingListView: View {
                 
                 HStack {
                     ZStack(alignment: .leading) {
-                        if viewModel.newItem.isEmpty {
+                        if viewModel.newItemName.isEmpty {
                             Text("Enter New Item")
                                 .foregroundColor(SRColors.white)
                                 .padding(.leading, 20)
                         }
-                        TextField("", text: $viewModel.newItem)
+                        TextField("", text: $viewModel.newItemName)
                             .padding(.leading, 20)
                             .foregroundColor(SRColors.blue)
                             .accentColor(SRColors.blue)

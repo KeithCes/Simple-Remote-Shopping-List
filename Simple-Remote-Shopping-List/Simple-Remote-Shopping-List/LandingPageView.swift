@@ -23,11 +23,16 @@ struct LandingPageView: View {
                 List {
                     if viewModel.shoppingLists.count > 0 {
                         ForEach(0..<viewModel.shoppingLists.count, id: \.self) { index in
-                            SRText(text: viewModel.shoppingLists[index].title, fontSize: 16)
-                                .onTapGesture {
-                                    viewModel.selectedShoppingList = viewModel.shoppingLists[index]
-                                    viewModel.isShowingEditShoppingList.toggle()
-                                }
+                            HStack {
+                                SRText(text: viewModel.shoppingLists[index].title, fontSize: 16)
+                                    .foregroundColor(SRColors.blue)
+                                Spacer()
+                            }
+                            .contentShape(Rectangle())
+                            .onTapGesture {
+                                viewModel.selectedShoppingList = viewModel.shoppingLists[index]
+                                viewModel.isShowingEditShoppingList.toggle()
+                            }
                         }
                         .listRowBackground(SRColors.white.opacity(0.8))
                         .padding(.vertical, 5)
