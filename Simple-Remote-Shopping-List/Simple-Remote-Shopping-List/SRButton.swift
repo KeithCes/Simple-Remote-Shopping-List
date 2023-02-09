@@ -8,12 +8,9 @@
 import Foundation
 import SwiftUI
 
-// general use button for  views
-// isOutline to convert from default black to wireframe white
-// isActive to make button grayed out; make sure to disable clicked action
+// general use button for views
 struct SRButton: View {
     var text: String
-    var isOutline: Bool
     
     var clicked: (() -> Void)
     
@@ -23,14 +20,13 @@ struct SRButton: View {
                 Text(self.text)
                    .font(.custom("SFProText-Medium", size: 16))
             }
-            .foregroundColor(self.isOutline ? Color.black : Color.white)
+            .foregroundColor(SRColors.blue)
             .frame(minHeight: 54, maxHeight: 54)
             .frame(maxWidth: .infinity)
-            .background(self.isOutline ? Color.white : Color.black)
-            .cornerRadius(10)
-            .overlay(
-                RoundedRectangle(cornerRadius: 6)
-                    .stroke(Color.black)
+            .background(Rectangle()
+                .fill(SRColors.white.opacity(0.5))
+                .frame(width: 250, height: 50)
+                .cornerRadius(10)
             )
             .padding(.horizontal, 20)
         }

@@ -39,7 +39,7 @@ struct CreateAccountView: View {
                     }
                 }
             
-            SRButton(text: "CREATE", isOutline: false) {
+            SRButton(text: "CREATE") {
                 viewModel.checkPostErrorToast()
                 
                 if viewModel.checkIfCreateInfoValid() {

@@ -18,7 +18,7 @@ struct PrelogView: View {
         VStack {
             if Auth.auth().currentUser == nil {
                 
-                SRButton(text: "LOGIN", isOutline: false) {
+                SRButton(text: "LOGIN") {
                     viewModel.isShowingLogin.toggle()
                 }
                 .sheet(isPresented: $viewModel.isShowingLogin, onDismiss: {
@@ -27,7 +27,7 @@ struct PrelogView: View {
                     LoginView(isShowingLogin: $viewModel.isShowingLogin)
                 }
                 
-                SRButton(text: "CREATE", isOutline: false) {
+                SRButton(text: "CREATE") {
                     viewModel.isShowingCreate.toggle()
                 }
                 .sheet(isPresented: $viewModel.isShowingCreate, onDismiss: {
