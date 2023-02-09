@@ -45,22 +45,24 @@ final class CreateAccountViewModel: ObservableObject {
             
             let ref = Database.database().reference()
             
-            Auth.auth().createUser(withEmail: email, password: password) { username, error in
-                if error == nil && username != nil {
-                    
-                    let userID = Auth.auth().currentUser!.uid
-                    
-                    let userDetails = [
-                        "email": self.email,
-                    ] as [String : Any]
-                    
-                    ref.child("users").child(userID).child("userInfo").setValue(userDetails)
-                    
-                    print("user created")
-                    self.isShowingCreate = false
-                }
-                else {
-                    print("error:  \(error!.localizedDescription)")
+            DispatchQueue.global(qos: .background).async {
+                Auth.auth().createUser(withEmail: self.email, password: self.password) { username, error in
+                    if error == nil && username != nil {
+                        
+                        let userID = Auth.auth().currentUser!.uid
+                        
+                        let userDetails = [
+                            "email": self.email,
+                        ] as [String : Any]
+                        
+                        ref.child("users").child(userID).child("userInfo").setValue(userDetails)
+                        
+                        print("user created")
+                        self.isShowingCreate = false
+                    }
+                    else {
+                        print("error:  \(error!.localizedDescription)")
+                    }
                 }
             }
         }

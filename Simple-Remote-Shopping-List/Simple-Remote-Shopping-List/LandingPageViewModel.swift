@@ -16,6 +16,7 @@ final class LandingPageViewModel: ObservableObject {
     @Published var selectedShoppingList: ShoppingList?
     
     @Published var isShowingEditShoppingList: Bool = false
+    @Published var isProgressViewHidden: Bool = false
     
     func getYourLists() {
         
@@ -25,30 +26,37 @@ final class LandingPageViewModel: ObservableObject {
         
         let ref = Database.database().reference()
         
-        ref.child("users").child(userID).child("shoppingLists").observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            guard let snapshot = snapshot.value as? [String: Any] else {
-                return
-            }
-            
-            for snap in snapshot {
+        self.shoppingLists = []
+        self.isProgressViewHidden = false
+        
+        DispatchQueue.global(qos: .background).async {
+            ref.child("users").child(userID).child("shoppingLists").observeSingleEvent(of: .value, with: { (snapshot) in
                 
-                guard let snapshotDict = snap.value as? [String: Any] else {
+                guard let snapshot = snapshot.value as? [String: Any] else {
                     return
                 }
                 
-                do {
-                    let jsonData = try JSONSerialization.data(withJSONObject: snapshotDict, options: [])
-                    let shoppingList = try JSONDecoder().decode(ShoppingList.self, from: jsonData)
+                for snap in snapshot {
                     
-                    self.shoppingLists.append(shoppingList)
+                    guard let snapshotDict = snap.value as? [String: Any] else {
+                        return
+                    }
+                    
+                    do {
+                        let jsonData = try JSONSerialization.data(withJSONObject: snapshotDict, options: [])
+                        let shoppingList = try JSONDecoder().decode(ShoppingList.self, from: jsonData)
+                        
+                        self.shoppingLists.append(shoppingList)
+                    }
+                    catch let error {
+                        print(error)
+                    }
                 }
-                catch let error {
-                    print(error)
-                }
-            }
-            
-            print(self.shoppingLists)
-        })
+                
+                self.shoppingLists.sort { $0.title < $1.title }
+                
+                self.isProgressViewHidden = true
+            })
+        }
     }
 }

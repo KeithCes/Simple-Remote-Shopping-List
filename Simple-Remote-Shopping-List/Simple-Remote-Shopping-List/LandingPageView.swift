@@ -77,8 +77,18 @@ struct LandingPageView: View {
                 .padding(.trailing, 16)
             }
         }
+        .overlay(
+            ProgressView()
+                .scaleEffect(x: 2, y: 2, anchor: .center)
+                .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+                .background(RoundedRectangle(cornerRadius: 3)
+                    .fill(SRColors.blue))
+                .progressViewStyle(CircularProgressViewStyle(tint: SRColors.white))
+                .isHidden(viewModel.isProgressViewHidden)
+        )
         .fullScreenCover(isPresented: $viewModel.isShowingEditShoppingList, onDismiss: {
             viewModel.selectedShoppingList = nil
+            viewModel.getYourLists()
         }) {
             EditShoppingListView(isShowingCreateNewList: $viewModel.isShowingEditShoppingList,
                                  selectedShoppingList: $viewModel.selectedShoppingList)

@@ -72,6 +72,7 @@ struct EditShoppingListView: View {
                                     }
                                 }
                                 .strikethrough(viewModel.items[index].isChecked)
+                                .submitLabel(.done)
                                 
                                 Spacer()
                                 
@@ -142,6 +143,7 @@ struct EditShoppingListView: View {
             
             SRButton(text: "SAVE") {
                 viewModel.sendShoppingListFirebase()
+                self.isShowingCreateNewList.toggle()
             }
             
             Spacer()

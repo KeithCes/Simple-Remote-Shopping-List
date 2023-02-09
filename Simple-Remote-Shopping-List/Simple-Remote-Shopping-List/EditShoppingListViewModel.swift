@@ -39,10 +39,12 @@ final class EditShoppingListViewModel: ObservableObject {
         }
         
         let itemsCoded = self.items.map { item in item.dictionary ?? [:] }
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(itemsCoded)
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("title").setValue(self.listTitle)
-        ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("ID").setValue(self.listID)
-
+        
+        DispatchQueue.global(qos: .background).async {
+            ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(itemsCoded)
+            ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("title").setValue(self.listTitle)
+            ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("ID").setValue(self.listID)
+        }
         
         print("order sent to firebase")
     }
