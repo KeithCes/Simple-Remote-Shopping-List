@@ -35,7 +35,7 @@ struct SRPasswordTextbox: View {
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.leading)
                 .background(Rectangle()
-                    .fill(SRColors.white)
+                    .fill(SRColors.white.opacity(0.5))
                     .frame(height: 46)
                     .frame(maxWidth: .infinity)
                     .cornerRadius(10))

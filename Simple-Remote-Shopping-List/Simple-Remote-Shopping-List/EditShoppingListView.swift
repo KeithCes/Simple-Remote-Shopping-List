@@ -76,10 +76,10 @@ struct EditShoppingListView: View {
                                 
                                 Spacer()
                                 
-                                Image(systemName: "x.circle")
+                                Image(systemName: viewModel.items[index].isChecked ? "checkmark.square" : "square")
                                     .resizable()
                                     .frame(width: 20, height: 20)
-                                    .foregroundColor(.red)
+                                    .foregroundColor(viewModel.items[index].isChecked ? .green : .red)
                                     .onTapGesture {
                                         viewModel.items[index].isChecked.toggle()
                                     }
@@ -140,10 +140,8 @@ struct EditShoppingListView: View {
             .frame(height: (UIScreen.main.bounds.height / 2))
             
             
-            
             SRButton(text: "SAVE") {
                 viewModel.sendShoppingListFirebase()
-                self.isShowingCreateNewList.toggle()
             }
             
             Spacer()
@@ -158,6 +156,15 @@ struct EditShoppingListView: View {
             viewModel.items = listItems
             viewModel.listID = listID
         }
+        .onChange(of: viewModel.isSuccessfullySentToFirebase) { success in
+            if success {
+                self.isShowingCreateNewList.toggle()
+            }
+        }
+        .toast(message: viewModel.toastMessage,
+               isShowing: $viewModel.isShowingToast,
+               duration: Toast.long
+        )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
         .ignoresSafeArea()

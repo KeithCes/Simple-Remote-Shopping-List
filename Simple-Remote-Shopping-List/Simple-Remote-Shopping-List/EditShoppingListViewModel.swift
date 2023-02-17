@@ -17,6 +17,11 @@ final class EditShoppingListViewModel: ObservableObject {
     @Published var isEditing = false
     @Published var listTitle: String = ""
     @Published var listID: String = UUID().uuidString
+    
+    @Published var isShowingToast: Bool = false
+    @Published var toastMessage: String = "Error"
+    
+    @Published var isSuccessfullySentToFirebase: Bool = false
 
     
     func delete(at offsets: IndexSet) {
@@ -40,12 +45,20 @@ final class EditShoppingListViewModel: ObservableObject {
         
         let itemsCoded = self.items.map { item in item.dictionary ?? [:] }
         
+        if self.listTitle == "" {
+            self.toastMessage = "Error: Please Name Your List Before Saving"
+            self.isShowingToast = true
+            return
+        }
+        
         DispatchQueue.global(qos: .background).async {
             ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(itemsCoded)
             ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("title").setValue(self.listTitle)
             ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("ID").setValue(self.listID)
+            
+            print("order sent to firebase")
+            
+            self.isSuccessfullySentToFirebase.toggle()
         }
-        
-        print("order sent to firebase")
     }
 }

@@ -57,6 +57,24 @@ struct LandingPageView: View {
             Spacer()
             
             HStack {
+                Button(action: {
+                    viewModel.logoutUser()
+                }, label: {
+                    ZStack {
+                        Rectangle()
+                            .foregroundColor(SRColors.white)
+                            .frame(width: 48, height: 48)
+                            .cornerRadius(48)
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                            .resizable()
+                            .frame(width: 15, height: 15)
+                            .foregroundColor(Color.black)
+                    }
+                })
+                .padding(.vertical, 32)
+                .padding(.leading, 16)
+                .accessibility(identifier: "logoutButton")
+                
                 Spacer()
                 
                 Button(action: {
@@ -92,6 +110,9 @@ struct LandingPageView: View {
         }) {
             EditShoppingListView(isShowingCreateNewList: $viewModel.isShowingEditShoppingList,
                                  selectedShoppingList: $viewModel.selectedShoppingList)
+        }
+        .fullScreenCover(isPresented: $viewModel.isUserLoggedOut) {
+            PrelogView()
         }
         .onAppear{
             viewModel.getYourLists()

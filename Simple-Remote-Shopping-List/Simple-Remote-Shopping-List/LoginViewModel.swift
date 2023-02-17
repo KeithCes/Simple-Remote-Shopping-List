@@ -23,7 +23,7 @@ final class LoginViewModel: ObservableObject {
         Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
             if error != nil {
                 self.toastMessage = "Error: " + String(error?.localizedDescription ?? "")
-                self.isShowingToast.toggle()
+                self.isShowingToast = true
                 print(error?.localizedDescription ?? "")
             }
             else {

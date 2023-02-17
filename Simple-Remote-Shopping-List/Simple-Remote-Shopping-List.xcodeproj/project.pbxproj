@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57B658F5299FE02100C6070C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F4299FE02100C6070C /* FirebaseAuth */; };
+		57B658F7299FE02400C6070C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F6299FE02400C6070C /* FirebaseDatabase */; };
+		57B658F9299FE8A100C6070C /* PrelogViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */; };
 		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
 		57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF6298ED742005957DE /* Assets.xcassets */; };
 		57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF9298ED742005957DE /* Preview Assets.xcassets */; };
@@ -63,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewUITest.swift; sourceTree = "<group>"; };
 		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
 		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B658F7299FE02400C6070C /* FirebaseDatabase in Frameworks */,
+				57B658F5299FE02100C6070C /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +136,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		57B658BD299FDB7E00C6070C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		57C5CEE6298ED73E005957DE = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 				57C5CF02298ED742005957DE /* Simple-Remote-Shopping-ListTests */,
 				57C5CF0C298ED742005957DE /* Simple-Remote-Shopping-ListUITests */,
 				57C5CEF0298ED73E005957DE /* Products */,
+				57B658BD299FDB7E00C6070C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,7 +177,6 @@
 				57C5CF31298EEF24005957DE /* PrelogViewModel.swift */,
 				57C5CF33298EEF4F005957DE /* SRButton.swift */,
 				57C5CF35298EEFD7005957DE /* SRColors.swift */,
-				57C5CF37298EF017005957DE /* Color+Hexcode.swift */,
 				57C5CF3C298EF139005957DE /* CreateAccountView.swift */,
 				57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */,
 				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
@@ -180,6 +193,7 @@
 				57C5CF582994906B005957DE /* ShoppingListItem.swift */,
 				57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */,
 				57C5CF5C29955891005957DE /* View+isHidden.swift */,
+				57C5CF37298EF017005957DE /* Color+Hexcode.swift */,
 			);
 			path = "Simple-Remote-Shopping-List";
 			sourceTree = "<group>";
@@ -205,6 +219,7 @@
 			children = (
 				57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */,
 				57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */,
+				57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */,
 			);
 			path = "Simple-Remote-Shopping-ListUITests";
 			sourceTree = "<group>";
@@ -252,6 +267,10 @@
 				57C5CF01298ED742005957DE /* PBXTargetDependency */,
 			);
 			name = "Simple-Remote-Shopping-ListTests";
+			packageProductDependencies = (
+				57B658F4299FE02100C6070C /* FirebaseAuth */,
+				57B658F6299FE02400C6070C /* FirebaseDatabase */,
+			);
 			productName = "Simple-Remote-Shopping-ListTests";
 			productReference = 57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -391,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				57C5CF10298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift in Sources */,
+				57B658F9299FE8A100C6070C /* PrelogViewUITest.swift in Sources */,
 				57C5CF0E298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -716,6 +736,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		57B658F4299FE02100C6070C /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		57B658F6299FE02400C6070C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		57C5CF1D298EEC41005957DE /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 57C5CF1C298EEC41005957DE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
