@@ -134,6 +134,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572AEEC029A0393F00A011E7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF2F298EEEDD005957DE /* PrelogView.swift */,
+				57C5CF3C298EF139005957DE /* CreateAccountView.swift */,
+				57C5CF5229918F44005957DE /* EditShoppingListView.swift */,
+				57C5CF4E29918DB6005957DE /* LandingPageView.swift */,
+				57C5CF46298EF541005957DE /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		572AEEC129A0394A00A011E7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF31298EEF24005957DE /* PrelogViewModel.swift */,
+				57C5CF48298EF5B8005957DE /* LoginViewModel.swift */,
+				57C5CF542991CEB4005957DE /* EditShoppingListViewModel.swift */,
+				57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */,
+				57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		572AEEC229A0396100A011E7 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF33298EEF4F005957DE /* SRButton.swift */,
+				57C5CF35298EEFD7005957DE /* SRColors.swift */,
+				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
+				57C5CF42298EF221005957DE /* SRText.swift */,
+				57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */,
+				57C5CF4A298EF5FA005957DE /* Toast.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		572AEEC329A0398500A011E7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */,
+				57C5CF5C29955891005957DE /* View+isHidden.swift */,
+				57C5CF37298EF017005957DE /* Color+Hexcode.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		572AEEC629A039E700A011E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				57C5CF582994906B005957DE /* ShoppingListItem.swift */,
+				57C5CF5629947693005957DE /* ShoppingList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		57B658BD299FDB7E00C6070C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,33 +221,17 @@
 		57C5CEF1298ED73E005957DE /* Simple-Remote-Shopping-List */ = {
 			isa = PBXGroup;
 			children = (
+				572AEEC629A039E700A011E7 /* Models */,
+				572AEEC229A0396100A011E7 /* Components */,
+				572AEEC129A0394A00A011E7 /* ViewModels */,
+				572AEEC029A0393F00A011E7 /* Views */,
+				572AEEC329A0398500A011E7 /* Extensions */,
 				57C5CF3B298EF0AE005957DE /* Info.plist */,
-				57C5CF39298EF095005957DE /* SFProText-Medium.ttf */,
-				57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */,
-				57C5CEF6298ED742005957DE /* Assets.xcassets */,
 				57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */,
+				57C5CF39298EF095005957DE /* SFProText-Medium.ttf */,
+				57C5CEF6298ED742005957DE /* Assets.xcassets */,
+				57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */,
 				57C5CEF8298ED742005957DE /* Preview Content */,
-				57C5CF2F298EEEDD005957DE /* PrelogView.swift */,
-				57C5CF31298EEF24005957DE /* PrelogViewModel.swift */,
-				57C5CF33298EEF4F005957DE /* SRButton.swift */,
-				57C5CF35298EEFD7005957DE /* SRColors.swift */,
-				57C5CF3C298EF139005957DE /* CreateAccountView.swift */,
-				57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */,
-				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
-				57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */,
-				57C5CF42298EF221005957DE /* SRText.swift */,
-				57C5CF46298EF541005957DE /* LoginView.swift */,
-				57C5CF48298EF5B8005957DE /* LoginViewModel.swift */,
-				57C5CF4A298EF5FA005957DE /* Toast.swift */,
-				57C5CF4E29918DB6005957DE /* LandingPageView.swift */,
-				57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */,
-				57C5CF5229918F44005957DE /* EditShoppingListView.swift */,
-				57C5CF542991CEB4005957DE /* EditShoppingListViewModel.swift */,
-				57C5CF5629947693005957DE /* ShoppingList.swift */,
-				57C5CF582994906B005957DE /* ShoppingListItem.swift */,
-				57C5CF5A299493E4005957DE /* Encodable+dictionary.swift */,
-				57C5CF5C29955891005957DE /* View+isHidden.swift */,
-				57C5CF37298EF017005957DE /* Color+Hexcode.swift */,
 			);
 			path = "Simple-Remote-Shopping-List";
 			sourceTree = "<group>";
