@@ -93,6 +93,7 @@ struct LandingPageView: View {
                 })
                 .padding(.vertical, 32)
                 .padding(.trailing, 16)
+                .accessibility(identifier: "createListButton")
             }
         }
         .overlay(
@@ -102,7 +103,8 @@ struct LandingPageView: View {
                 .background(RoundedRectangle(cornerRadius: 3)
                     .fill(SRColors.blue))
                 .progressViewStyle(CircularProgressViewStyle(tint: SRColors.white))
-                .isHidden(viewModel.isProgressViewHidden)
+            // hide when loading done or force hide during uitest
+                .isHidden(CommandLine.arguments.contains("-TestUserLoggedIn") ? true : viewModel.isProgressViewHidden)
         )
         .fullScreenCover(isPresented: $viewModel.isShowingEditShoppingList, onDismiss: {
             viewModel.selectedShoppingList = nil

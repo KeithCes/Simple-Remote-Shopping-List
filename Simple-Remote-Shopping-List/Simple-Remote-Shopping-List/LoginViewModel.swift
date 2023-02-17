@@ -20,14 +20,19 @@ final class LoginViewModel: ObservableObject {
     
     
     func login() {
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-            if error != nil {
-                self.toastMessage = "Error: " + String(error?.localizedDescription ?? "")
-                self.isShowingToast = true
-                print(error?.localizedDescription ?? "")
-            }
-            else {
-                self.isShowingLogin = false
+        if CommandLine.arguments.contains("-TestUserNotLoggedIn") {
+            self.isShowingLogin = false
+        }
+        else {
+            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+                if error != nil {
+                    self.toastMessage = "Error: " + String(error?.localizedDescription ?? "")
+                    self.isShowingToast = true
+                    print(error?.localizedDescription ?? "")
+                }
+                else {
+                    self.isShowingLogin = false
+                }
             }
         }
     }

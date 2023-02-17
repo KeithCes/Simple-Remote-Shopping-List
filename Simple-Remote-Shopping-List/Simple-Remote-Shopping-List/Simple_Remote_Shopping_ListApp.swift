@@ -24,7 +24,12 @@ struct YourApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                PrelogView()
+                if CommandLine.arguments.contains("-TestUserLoggedIn") {
+                    LandingPageView()
+                }
+                else {
+                    PrelogView()
+                }
             }
         }
     }

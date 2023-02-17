@@ -7,15 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		572AEEBD29A0366C00A011E7 /* LandingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */; };
+		572AEEBF29A036A200A011E7 /* PrelogViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */; };
 		57B658F5299FE02100C6070C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F4299FE02100C6070C /* FirebaseAuth */; };
 		57B658F7299FE02400C6070C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F6299FE02400C6070C /* FirebaseDatabase */; };
-		57B658F9299FE8A100C6070C /* PrelogViewUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */; };
 		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
 		57C5CEF7298ED742005957DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF6298ED742005957DE /* Assets.xcassets */; };
 		57C5CEFA298ED742005957DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57C5CEF9298ED742005957DE /* Preview Assets.xcassets */; };
 		57C5CF04298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */; };
-		57C5CF0E298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */; };
-		57C5CF10298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */; };
 		57C5CF1E298EEC41005957DE /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF1D298EEC41005957DE /* FirebaseAnalytics */; };
 		57C5CF20298EEC41005957DE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF1F298EEC41005957DE /* FirebaseAuth */; };
 		57C5CF22298EEC41005957DE /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 57C5CF21298EEC41005957DE /* FirebaseCrashlytics */; };
@@ -66,7 +65,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewUITest.swift; sourceTree = "<group>"; };
+		572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewUITests.swift; sourceTree = "<group>"; };
+		572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewUITests.swift; sourceTree = "<group>"; };
 		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
 		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -74,8 +74,6 @@
 		57C5CEFF298ED742005957DE /* Simple-Remote-Shopping-ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Remote-Shopping-ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CF03298ED742005957DE /* Simple_Remote_Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListTests.swift; sourceTree = "<group>"; };
 		57C5CF09298ED742005957DE /* Simple-Remote-Shopping-ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Simple-Remote-Shopping-ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITests.swift; sourceTree = "<group>"; };
-		57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		57C5CF2F298EEEDD005957DE /* PrelogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogView.swift; sourceTree = "<group>"; };
 		57C5CF31298EEF24005957DE /* PrelogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewModel.swift; sourceTree = "<group>"; };
@@ -217,9 +215,8 @@
 		57C5CF0C298ED742005957DE /* Simple-Remote-Shopping-ListUITests */ = {
 			isa = PBXGroup;
 			children = (
-				57C5CF0D298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift */,
-				57C5CF0F298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift */,
-				57B658F8299FE8A100C6070C /* PrelogViewUITest.swift */,
+				572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */,
+				572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */,
 			);
 			path = "Simple-Remote-Shopping-ListUITests";
 			sourceTree = "<group>";
@@ -312,6 +309,7 @@
 					};
 					57C5CF08298ED742005957DE = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = 57C5CEEE298ED73E005957DE;
 					};
 				};
@@ -409,9 +407,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57C5CF10298ED742005957DE /* Simple_Remote_Shopping_ListUITestsLaunchTests.swift in Sources */,
-				57B658F9299FE8A100C6070C /* PrelogViewUITest.swift in Sources */,
-				57C5CF0E298ED742005957DE /* Simple_Remote_Shopping_ListUITests.swift in Sources */,
+				572AEEBD29A0366C00A011E7 /* LandingViewUITests.swift in Sources */,
+				572AEEBF29A036A200A011E7 /* PrelogViewUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,14 +648,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X9NZ672UUT;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Simple-Remote-Shopping-List";
@@ -669,10 +673,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X9NZ672UUT;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "keithc.Simple-Remote-Shopping-ListUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";

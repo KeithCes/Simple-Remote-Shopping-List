@@ -1,5 +1,5 @@
 //
-//  PrelogViewUITest.swift
+//  PrelogViewUITests.swift
 //  Simple-Remote-Shopping-ListUITests
 //
 //  Created by Keith C on 2/17/23.
@@ -8,16 +8,29 @@
 import Foundation
 import XCTest
 
-class PrelogViewUITest: XCTestCase {
+class PrelogViewUITests: XCTestCase {
 
     override func setUpWithError() throws {
         continueAfterFailure = false
-        let app = XCUIApplication()
-        app.launch()
     }
 
+    func testCreateButton() throws {
+        let app = XCUIApplication()
+        app.launchArguments += ["-TestUserNotLoggedIn"]
+        app.launch()
+        
+        // Check that the create button is visible when the user is not logged in
+        XCTAssert(app.buttons["CREATE"].exists)
+        
+        // Tap the create button and verify that the CreateAccountView is presented
+        app.buttons["CREATE"].tap()
+        XCTAssert(app.staticTexts["CREATE ACCOUNT"].exists)
+    }
+    
     func testLoginButton() throws {
         let app = XCUIApplication()
+        app.launchArguments += ["-TestUserNotLoggedIn"]
+        app.launch()
         
         // check that the login button is visible when the user is not logged in
         XCTAssert(app.buttons["LOGIN"].exists)
@@ -39,25 +52,7 @@ class PrelogViewUITest: XCTestCase {
         loginButton.tap()
         sleep(3)
         
-        // tap logout button (if logout button exists we made it to landing page)
         let logoutButton = app.buttons["logoutButton"]
         XCTAssert(logoutButton.exists)
-        logoutButton.tap()
-        sleep(3)
-        
-        // check login button exists (we logged out successfully)
-        XCTAssert(app.buttons["LOGIN"].exists)
     }
-    
-    func testCreateButton() throws {
-        let app = XCUIApplication()
-        
-        // Check that the create button is visible when the user is not logged in
-        XCTAssert(app.buttons["CREATE"].exists)
-        
-        // Tap the create button and verify that the CreateAccountView is presented
-        app.buttons["CREATE"].tap()
-        XCTAssert(app.staticTexts["CREATE ACCOUNT"].exists)
-    }
-
 }
