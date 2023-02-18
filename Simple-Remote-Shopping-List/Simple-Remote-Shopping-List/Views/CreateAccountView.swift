@@ -34,7 +34,7 @@ struct CreateAccountView: View {
                 .onSubmit {
                     viewModel.checkPostErrorToast()
                     
-                    if viewModel.checkIfCreateInfoValid() {
+                    if viewModel.isCreateInfoValid() {
                         viewModel.createAccount()
                     }
                 }
@@ -42,7 +42,7 @@ struct CreateAccountView: View {
             SRButton(text: "CREATE") {
                 viewModel.checkPostErrorToast()
                 
-                if viewModel.checkIfCreateInfoValid() {
+                if viewModel.isCreateInfoValid() {
                     viewModel.createAccount()
                 }
             }

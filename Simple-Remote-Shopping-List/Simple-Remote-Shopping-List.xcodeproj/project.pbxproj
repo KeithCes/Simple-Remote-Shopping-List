@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		572AEEBD29A0366C00A011E7 /* LandingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */; };
 		572AEEBF29A036A200A011E7 /* PrelogViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */; };
+		572AEECD29A11C1700A011E7 /* SRButtonCircleSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEECC29A11C1700A011E7 /* SRButtonCircleSymbol.swift */; };
 		57B658F5299FE02100C6070C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F4299FE02100C6070C /* FirebaseAuth */; };
 		57B658F7299FE02400C6070C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F6299FE02400C6070C /* FirebaseDatabase */; };
 		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewUITests.swift; sourceTree = "<group>"; };
 		572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewUITests.swift; sourceTree = "<group>"; };
+		572AEECC29A11C1700A011E7 /* SRButtonCircleSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRButtonCircleSymbol.swift; sourceTree = "<group>"; };
 		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
 		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		572AEEC229A0396100A011E7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				572AEECC29A11C1700A011E7 /* SRButtonCircleSymbol.swift */,
 				57C5CF33298EEF4F005957DE /* SRButton.swift */,
 				57C5CF35298EEFD7005957DE /* SRColors.swift */,
 				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
@@ -420,6 +423,7 @@
 				57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */,
 				57C5CF47298EF541005957DE /* LoginView.swift in Sources */,
 				57C5CF592994906C005957DE /* ShoppingListItem.swift in Sources */,
+				572AEECD29A11C1700A011E7 /* SRButtonCircleSymbol.swift in Sources */,
 				57C5CF4F29918DB7005957DE /* LandingPageView.swift in Sources */,
 				57C5CF41298EF1ED005957DE /* SRPasswordTextbox.swift in Sources */,
 				57C5CF552991CEB4005957DE /* EditShoppingListViewModel.swift in Sources */,

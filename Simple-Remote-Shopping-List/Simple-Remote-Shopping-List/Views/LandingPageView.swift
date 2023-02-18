@@ -19,6 +19,7 @@ struct LandingPageView: View {
             SRText(text: "SHOPPING LISTS", fontSize: 30)
                 .padding(.top, 60)
             
+            // MARK: - Shopping List
             VStack {
                 List {
                     if viewModel.shoppingLists.count > 0 {
@@ -61,46 +62,22 @@ struct LandingPageView: View {
             
             Spacer()
             
+            // MARK: - Logout and Create List Buttons
             HStack {
-                Button(action: {
+                SRButtonCircleSymbol(symbolName: "rectangle.portrait.and.arrow.right", accessibilityID: "logoutButton") {
                     viewModel.logoutUser()
-                }, label: {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(SRColors.white)
-                            .frame(width: 48, height: 48)
-                            .cornerRadius(48)
-                        Image(systemName: "rectangle.portrait.and.arrow.right")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(Color.black)
-                    }
-                })
-                .padding(.vertical, 32)
+                }
                 .padding(.leading, 16)
-                .accessibility(identifier: "logoutButton")
                 
                 Spacer()
                 
-                Button(action: {
+                SRButtonCircleSymbol(symbolName: "plus", accessibilityID: "createListButton") {
                     viewModel.isShowingEditShoppingList.toggle()
-                }, label: {
-                    ZStack {
-                        Rectangle()
-                            .foregroundColor(SRColors.white)
-                            .frame(width: 48, height: 48)
-                            .cornerRadius(48)
-                        Image(systemName: "plus")
-                            .resizable()
-                            .frame(width: 15, height: 15)
-                            .foregroundColor(Color.black)
-                    }
-                })
-                .padding(.vertical, 32)
+                }
                 .padding(.trailing, 16)
-                .accessibility(identifier: "createListButton")
             }
         }
+        // MARK: - Progress View
         .overlay(
             ProgressView()
                 .scaleEffect(x: 2, y: 2, anchor: .center)
@@ -108,9 +85,9 @@ struct LandingPageView: View {
                 .background(RoundedRectangle(cornerRadius: 3)
                     .fill(SRColors.blue))
                 .progressViewStyle(CircularProgressViewStyle(tint: SRColors.white))
-            // hide when loading done or force hide during uitest
                 .isHidden(viewModel.isProgressViewHidden)
         )
+        // MARK: - Full Screen Covers
         .fullScreenCover(isPresented: $viewModel.isShowingEditShoppingList, onDismiss: {
             viewModel.selectedShoppingList = nil
             viewModel.getYourLists()
@@ -122,6 +99,7 @@ struct LandingPageView: View {
             PrelogView()
         }
         .onAppear{
+            // force hide progress view during uitest
             #if UITest
             viewModel.isProgressViewHidden = true
             #endif

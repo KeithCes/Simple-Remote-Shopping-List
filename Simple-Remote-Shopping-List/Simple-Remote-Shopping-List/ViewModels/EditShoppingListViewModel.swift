@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 final class EditShoppingListViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var items: [ShoppingListItem] = []
     @Published var selectedItem: ShoppingListItem?
     @Published var newItemName: String = ""
@@ -23,6 +25,7 @@ final class EditShoppingListViewModel: ObservableObject {
     
     @Published var isSuccessfullySentToFirebase: Bool = false
 
+    // MARK: - Methods
     
     func delete(at offsets: IndexSet) {
         self.items.remove(atOffsets: offsets)
@@ -58,7 +61,9 @@ final class EditShoppingListViewModel: ObservableObject {
             
             print("order sent to firebase")
             
-            self.isSuccessfullySentToFirebase.toggle()
+            DispatchQueue.main.async {
+                self.isSuccessfullySentToFirebase.toggle()
+            }
         }
     }
 }

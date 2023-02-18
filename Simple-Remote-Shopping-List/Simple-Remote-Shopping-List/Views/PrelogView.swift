@@ -31,7 +31,7 @@ struct PrelogView: View {
                     viewModel.isShowingCreate.toggle()
                 }
                 .sheet(isPresented: $viewModel.isShowingCreate, onDismiss: {
-                    viewModel.checkUserLoggedIn()
+                    viewModel.checkUserLoggedInSheetDismissed()
                 }) {
                     CreateAccountView(isShowingCreate: $viewModel.isShowingCreate)
                 }

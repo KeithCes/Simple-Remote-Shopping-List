@@ -7,6 +7,7 @@
 
 import Foundation
 
+// shopping list model
 struct ShoppingList: Codable {
     var title: String
     var items: [ShoppingListItem]

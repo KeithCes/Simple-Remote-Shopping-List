@@ -7,6 +7,7 @@
 
 import Foundation
 
+// name and isChecked for each item in shopping list
 struct ShoppingListItem: Codable {
     var name: String
     var isChecked: Bool

@@ -11,6 +11,8 @@ import FirebaseDatabase
 
 final class LandingPageViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var shoppingLists: [ShoppingList] = []
     
     @Published var selectedShoppingList: ShoppingList?
@@ -19,6 +21,8 @@ final class LandingPageViewModel: ObservableObject {
     @Published var isProgressViewHidden: Bool = false
     
     @Published var isUserLoggedOut: Bool = false
+    
+    // MARK: - Methods
     
     func logoutUser() {
         try! Auth.auth().signOut()
@@ -40,12 +44,14 @@ final class LandingPageViewModel: ObservableObject {
             ref.child("users").child(userID).child("shoppingLists").observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 guard let snapshot = snapshot.value as? [String: Any] else {
+                    self.isProgressViewHidden = true
                     return
                 }
                 
                 for snap in snapshot {
                     
                     guard let snapshotDict = snap.value as? [String: Any] else {
+                        self.isProgressViewHidden = true
                         return
                     }
                     
@@ -57,6 +63,7 @@ final class LandingPageViewModel: ObservableObject {
                     }
                     catch let error {
                         print(error)
+                        self.isProgressViewHidden = true
                     }
                 }
                 

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-// general use button for views
+// general use text button for views
 struct SRButton: View {
     var text: String
     
@@ -16,19 +16,17 @@ struct SRButton: View {
     
     var body: some View {
         Button(action: self.clicked) {
-            HStack {
-                Text(self.text)
-                   .font(.custom("SFProText-Medium", size: 16))
-            }
-            .foregroundColor(SRColors.white)
-            .frame(minHeight: 54, maxHeight: 54)
-            .frame(maxWidth: .infinity)
-            .background(Rectangle()
-                .fill(SRColors.white.opacity(0.5))
-                .frame(width: 250, height: 50)
-                .cornerRadius(10)
-            )
-            .padding(.horizontal, 20)
+            Text(self.text)
+                .font(.custom("SFProText-Medium", size: 16))
+                .foregroundColor(SRColors.white)
+                .frame(minHeight: 54)
+                .frame(maxWidth: .infinity)
+                .background(Rectangle()
+                    .fill(SRColors.white.opacity(0.5))
+                    .frame(width: 250, height: 50)
+                    .cornerRadius(10)
+                )
+                .padding(.horizontal, 20)
         }
     }
 }

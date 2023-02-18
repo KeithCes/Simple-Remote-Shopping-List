@@ -18,6 +18,8 @@ struct EditShoppingListView: View {
     
     
     var body: some View {
+        
+        // MARK: - Navigation
         VStack {
             HStack {
                 Button(action: {
@@ -34,6 +36,7 @@ struct EditShoppingListView: View {
             .padding(.top, 50)
             .padding(.leading, 20)
             
+            // MARK: - Title
             ZStack {
                 if viewModel.listTitle.isEmpty {
                     HStack {
@@ -57,9 +60,10 @@ struct EditShoppingListView: View {
                 .cornerRadius(10))
             .padding(.all, 20)
             
+            // MARK: - List of Items
             VStack {
                 List {
-                    if viewModel.items.count > 0 {
+                    if !viewModel.items.isEmpty {
                         ForEach(0..<viewModel.items.count, id: \.self) { index in
                             HStack {
                                 TextField("", text: $viewModel.items[index].name, onEditingChanged: { edit in
@@ -100,6 +104,7 @@ struct EditShoppingListView: View {
                     }
                 }
                 
+                // MARK: - Add new item
                 HStack {
                     ZStack(alignment: .leading) {
                         if viewModel.newItemName.isEmpty {
@@ -143,12 +148,15 @@ struct EditShoppingListView: View {
             .frame(height: (UIScreen.main.bounds.height / 2))
             
             
+            // MARK: - Save
             SRButton(text: "SAVE") {
                 viewModel.sendShoppingListFirebase()
             }
             
             Spacer()
         }
+        
+        // MARK: - Lifecycle handling
         .onAppear {
             guard let listTitle = self.selectedShoppingList?.title,
                   let listItems = self.selectedShoppingList?.items,
