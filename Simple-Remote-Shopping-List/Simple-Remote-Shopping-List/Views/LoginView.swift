@@ -21,11 +21,11 @@ struct LoginView: View {
             SRText(text: "LOGIN", fontSize: 24)
                 .padding(.top, 40)
             
-            SRTextbox(field: $viewModel.email, placeholderText: "Email")
+            SRTextbox(field: $viewModel.email, placeholderText: "Email", accessibilityID: "loginEmailField")
                 .padding(.bottom, 30)
                 .textInputAutocapitalization(.never)
             
-            SRPasswordTextbox(field: $viewModel.password, placeholderText: "Password")
+            SRPasswordTextbox(field: $viewModel.password, placeholderText: "Password", accessibilityID: "loginPasswordField")
                 .padding(.bottom, 30)
                 .submitLabel(.done)
                 .onSubmit {

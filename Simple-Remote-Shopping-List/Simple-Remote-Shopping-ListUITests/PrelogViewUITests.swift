@@ -37,10 +37,10 @@ class PrelogViewUITests: XCTestCase {
         app.buttons["LOGIN"].tap()
         
         // type email and password
-        let emailField = app.textFields["Email"]
+        let emailField = app.textFields["loginEmailField"]
         emailField.tap()
         emailField.typeText("test@test.test")
-        let passwordTextField = app.secureTextFields["Password"]
+        let passwordTextField = app.secureTextFields["loginPasswordField"]
         passwordTextField.tap()
         passwordTextField.typeText("testtest")
         

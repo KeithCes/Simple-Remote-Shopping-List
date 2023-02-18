@@ -14,6 +14,7 @@ struct SRPasswordTextbox: View {
     
     @Binding var field: String
     var placeholderText: String
+    var accessibilityID: String = ""
     
     var body: some View {
         VStack {
@@ -46,6 +47,8 @@ struct SRPasswordTextbox: View {
                         .frame(maxWidth: .infinity)
                         .cornerRadius(10))
                     .onReceive(Just(self.field)) { _ in limitText(30) }
+                    .accessibilityIdentifier(self.accessibilityID)
+                
             }
         }
         .padding(.horizontal, 20)

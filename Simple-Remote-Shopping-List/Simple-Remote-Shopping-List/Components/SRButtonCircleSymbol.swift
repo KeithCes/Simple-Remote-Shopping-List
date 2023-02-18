@@ -29,6 +29,6 @@ struct SRButtonCircleSymbol: View {
             }
         }
         .padding(.vertical, 32)
-        .accessibility(identifier: self.accessibilityID)
+        .accessibilityIdentifier(self.accessibilityID)
     }
 }

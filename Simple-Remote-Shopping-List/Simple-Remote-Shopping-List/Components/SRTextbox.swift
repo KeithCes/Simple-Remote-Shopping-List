@@ -18,6 +18,7 @@ struct SRTextbox: View {
     var placeholderText: String
     var charLimit: Int = 30
     var titleText: String = ""
+    var accessibilityID: String = ""
     
     var body: some View {
         VStack {
@@ -51,6 +52,7 @@ struct SRTextbox: View {
                         .cornerRadius(10))
                     .onReceive(Just(self.field)) { _ in limitText(self.charLimit) }
                     .multilineTextAlignment(.leading)
+                    .accessibilityIdentifier(self.accessibilityID)
             }
         }
         .padding(.horizontal, 20)
