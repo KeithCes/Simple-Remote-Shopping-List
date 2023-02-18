@@ -53,6 +53,12 @@ final class EditShoppingListViewModel: ObservableObject {
             self.isShowingToast = true
             return
         }
+        if itemsCoded.isEmpty {
+            self.toastMessage = "Error: Please Enter at least 1 item Before Saving"
+            self.isShowingToast = true
+            return
+        }
+        
         
         DispatchQueue.global(qos: .background).async {
             ref.child("users").child(userID).child("shoppingLists").child(self.listID).child("items").setValue(itemsCoded)
