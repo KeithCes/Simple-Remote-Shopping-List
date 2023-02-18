@@ -10,30 +10,35 @@ import FirebaseAuth
 
 final class LoginViewModel: ObservableObject {
     
+    // MARK: - Properties
+    
     @Published var email: String = ""
     @Published var password: String = ""
     
     @Published var isShowingToast: Bool = false
-    @Published var toastMessage: String = "Error"
+    @Published var toastMessage: String = ""
     
     @Published var isShowingLogin: Bool = true
     
+    // MARK: - Methods
     
     func login() {
-        if CommandLine.arguments.contains("-TestUserNotLoggedIn") {
-            self.isShowingLogin = false
-        }
-        else {
-            Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
-                if error != nil {
-                    self.toastMessage = "Error: " + String(error?.localizedDescription ?? "")
-                    self.isShowingToast = true
-                    print(error?.localizedDescription ?? "")
-                }
-                else {
-                    self.isShowingLogin = false
-                }
+        
+        #if UITest
+        self.isShowingLogin = false
+        return
+        #endif
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            if let error = error {
+                // display error message
+                self.toastMessage = "Error: " + error.localizedDescription
+                self.isShowingToast = true
+                print(error.localizedDescription)
+                return
             }
+            // user is signed in
+            self.isShowingLogin = false
         }
     }
 }

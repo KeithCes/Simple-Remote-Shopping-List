@@ -18,6 +18,16 @@ final class PrelogViewModel: ObservableObject {
     
     @Published var isLoggedIn: Bool = false
     
+    func checkUserLoggedInSheetDismissed() {
+        // if uitest force user past geniue auth check, otherwise make sure user logged in successfully
+        #if UITest
+        self.isLoggedIn.toggle()
+        return
+        #endif
+        
+        self.checkUserLoggedIn()
+    }
+    
     func checkUserLoggedIn() {
         
         // uncomment to log user out

@@ -22,13 +22,7 @@ struct PrelogView: View {
                     viewModel.isShowingLogin.toggle()
                 }
                 .sheet(isPresented: $viewModel.isShowingLogin, onDismiss: {
-                    // if uitest force user past geniue auth check, otherwise make sure user logged in successfully
-                    if CommandLine.arguments.contains("-TestUserNotLoggedIn") {
-                        viewModel.isLoggedIn.toggle()
-                    }
-                    else {
-                        viewModel.checkUserLoggedIn()
-                    }
+                    viewModel.checkUserLoggedInSheetDismissed()
                 }) {
                     LoginView(isShowingLogin: $viewModel.isShowingLogin)
                 }

@@ -16,7 +16,6 @@ class PrelogViewUITests: XCTestCase {
 
     func testCreateButton() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-TestUserNotLoggedIn"]
         app.launch()
         
         // Check that the create button is visible when the user is not logged in
@@ -29,7 +28,6 @@ class PrelogViewUITests: XCTestCase {
     
     func testLoginButton() throws {
         let app = XCUIApplication()
-        app.launchArguments += ["-TestUserNotLoggedIn"]
         app.launch()
         
         // check that the login button is visible when the user is not logged in

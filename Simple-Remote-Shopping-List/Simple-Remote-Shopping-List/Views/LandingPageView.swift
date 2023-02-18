@@ -104,7 +104,7 @@ struct LandingPageView: View {
                     .fill(SRColors.blue))
                 .progressViewStyle(CircularProgressViewStyle(tint: SRColors.white))
             // hide when loading done or force hide during uitest
-                .isHidden(CommandLine.arguments.contains("-TestUserLoggedIn") ? true : viewModel.isProgressViewHidden)
+                .isHidden(viewModel.isProgressViewHidden)
         )
         .fullScreenCover(isPresented: $viewModel.isShowingEditShoppingList, onDismiss: {
             viewModel.selectedShoppingList = nil
@@ -117,6 +117,10 @@ struct LandingPageView: View {
             PrelogView()
         }
         .onAppear{
+            #if UITest
+            viewModel.isProgressViewHidden = true
+            #endif
+            
             viewModel.getYourLists()
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
