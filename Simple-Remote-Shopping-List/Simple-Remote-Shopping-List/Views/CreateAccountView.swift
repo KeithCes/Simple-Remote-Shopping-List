@@ -53,8 +53,8 @@ struct CreateAccountView: View {
         .onChange(of: viewModel.isShowingCreate, perform: { _ in
             self.isShowingCreate.toggle()
         })
+        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
-        .ignoresSafeArea()
     }
 }

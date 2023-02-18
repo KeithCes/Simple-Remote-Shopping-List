@@ -45,8 +45,8 @@ struct LoginView: View {
         .onChange(of: viewModel.isShowingLogin, perform: { _ in
             self.isShowingLogin.toggle()
         })
+        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
-        .ignoresSafeArea()
     }
 }

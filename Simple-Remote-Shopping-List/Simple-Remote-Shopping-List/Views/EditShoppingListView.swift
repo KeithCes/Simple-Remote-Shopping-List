@@ -176,8 +176,8 @@ struct EditShoppingListView: View {
                isShowing: $viewModel.isShowingToast,
                duration: Toast.long
         )
+        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
-        .ignoresSafeArea()
     }
 }

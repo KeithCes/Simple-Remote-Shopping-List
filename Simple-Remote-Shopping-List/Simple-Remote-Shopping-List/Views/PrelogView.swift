@@ -43,9 +43,9 @@ struct PrelogView: View {
         .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
             LandingPageView()
         }
+        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
-        .ignoresSafeArea()
     }
 }
 

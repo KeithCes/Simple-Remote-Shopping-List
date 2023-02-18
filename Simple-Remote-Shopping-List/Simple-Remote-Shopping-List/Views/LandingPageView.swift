@@ -106,8 +106,8 @@ struct LandingPageView: View {
             
             viewModel.getYourLists()
         }
+        .ignoresSafeArea()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(SRColors.blue)
-        .ignoresSafeArea()
     }
 }
