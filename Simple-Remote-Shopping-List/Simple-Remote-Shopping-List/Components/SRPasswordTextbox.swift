@@ -37,7 +37,7 @@ struct SRPasswordTextbox: View {
                 SecureField("", text: self.$field)
                     .padding(.leading, 17)
                     .font(.system(size: 18, weight: .regular, design: .rounded))
-                    .foregroundColor(SRColors.white)
+                    .foregroundColor(SRColors.blue)
                     .fixedSize(horizontal: false, vertical: true)
                     .multilineTextAlignment(.leading)
                     .background(Rectangle()

@@ -90,10 +90,13 @@ struct EditShoppingListView: View {
                         .padding(.vertical, 5)
                     }
                     else {
-                        Text("ADD A NEW ITEM BELOW!")
-                            .foregroundColor(SRColors.white)
-                            .padding(.leading, 20)
-                            .listRowBackground(SRColors.blue)
+                        HStack {
+                            Spacer()
+                            Text("ADD A NEW ITEM BELOW!")
+                                .foregroundColor(SRColors.white)
+                            Spacer()
+                        }
+                        .listRowBackground(SRColors.blue)
                     }
                 }
                 

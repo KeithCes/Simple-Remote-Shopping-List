@@ -37,10 +37,16 @@ struct LandingPageView: View {
                         .padding(.vertical, 5)
                     }
                     else {
-                        Text("ADD A NEW ITEM BELOW!")
-                            .foregroundColor(SRColors.white)
-                            .padding(.leading, 20)
-                            .listRowBackground(SRColors.blue)
+                        HStack {
+                            Spacer()
+                            Text("ADD A NEW LIST!")
+                                .foregroundColor(SRColors.white)
+                            Spacer()
+                        }
+                        .onTapGesture {
+                            viewModel.isShowingEditShoppingList.toggle()
+                        }
+                        .listRowBackground(SRColors.blue)
                     }
                 }
             }
@@ -51,7 +57,7 @@ struct LandingPageView: View {
                 .fill(SRColors.white.opacity(0.1))
                 .cornerRadius(10))
             .padding(.all, 20)
-            .frame(height: (UIScreen.main.bounds.height / 2))
+            .frame(height: (UIScreen.main.bounds.height / 2) + 150)
             
             Spacer()
             

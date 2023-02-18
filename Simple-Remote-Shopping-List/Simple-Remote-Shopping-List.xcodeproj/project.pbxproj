@@ -164,8 +164,8 @@
 				57C5CF33298EEF4F005957DE /* SRButton.swift */,
 				57C5CF35298EEFD7005957DE /* SRColors.swift */,
 				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
-				57C5CF42298EF221005957DE /* SRText.swift */,
 				57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */,
+				57C5CF42298EF221005957DE /* SRText.swift */,
 				57C5CF4A298EF5FA005957DE /* Toast.swift */,
 			);
 			path = Components;
