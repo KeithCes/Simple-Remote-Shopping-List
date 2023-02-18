@@ -20,7 +20,7 @@ struct SRPasswordTextbox: View {
             // small text title above field
             HStack {
                 Text(self.placeholderText.uppercased())
-                    .foregroundColor(Color.black)
+                    .foregroundColor(SRColors.white)
                     .font(.custom("SFProText-Medium", size: 10))
                     .multilineTextAlignment(.leading)
                 
@@ -28,18 +28,25 @@ struct SRPasswordTextbox: View {
             }
             .padding(.bottom, 6)
             
-            SecureField(self.placeholderText, text: self.$field)
-                .padding(.leading, 17)
-                .font(.system(size: 18, weight: .regular, design: .rounded))
-                .foregroundColor(Color.gray)
-                .fixedSize(horizontal: false, vertical: true)
-                .multilineTextAlignment(.leading)
-                .background(Rectangle()
-                    .fill(SRColors.white.opacity(0.5))
-                    .frame(height: 46)
-                    .frame(maxWidth: .infinity)
-                    .cornerRadius(10))
-                .onReceive(Just(self.field)) { _ in limitText(30) }
+            ZStack(alignment: .leading) {
+                if self.field.isEmpty {
+                    Text(self.placeholderText)
+                        .foregroundColor(SRColors.white)
+                        .padding(.leading, 18)
+                }
+                SecureField("", text: self.$field)
+                    .padding(.leading, 17)
+                    .font(.system(size: 18, weight: .regular, design: .rounded))
+                    .foregroundColor(SRColors.white)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+                    .background(Rectangle()
+                        .fill(SRColors.white.opacity(0.5))
+                        .frame(height: 46)
+                        .frame(maxWidth: .infinity)
+                        .cornerRadius(10))
+                    .onReceive(Just(self.field)) { _ in limitText(30) }
+            }
         }
         .padding(.horizontal, 20)
     }

@@ -20,7 +20,7 @@ struct SRButton: View {
                 Text(self.text)
                    .font(.custom("SFProText-Medium", size: 16))
             }
-            .foregroundColor(SRColors.blue)
+            .foregroundColor(SRColors.white)
             .frame(minHeight: 54, maxHeight: 54)
             .frame(maxWidth: .infinity)
             .background(Rectangle()

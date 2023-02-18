@@ -24,8 +24,7 @@ struct LandingPageView: View {
                     if viewModel.shoppingLists.count > 0 {
                         ForEach(0..<viewModel.shoppingLists.count, id: \.self) { index in
                             HStack {
-                                SRText(text: viewModel.shoppingLists[index].title, fontSize: 16)
-                                    .foregroundColor(SRColors.blue)
+                                SRText(text: viewModel.shoppingLists[index].title, fontSize: 16, textColor: SRColors.blue)
                                 Spacer()
                             }
                             .contentShape(Rectangle())

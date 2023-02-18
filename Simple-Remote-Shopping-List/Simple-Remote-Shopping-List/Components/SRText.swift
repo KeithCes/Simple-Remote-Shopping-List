@@ -12,11 +12,13 @@ import SwiftUI
 struct SRText: View {
     var text: String
     var fontSize: CGFloat
+    var textColor: Color = SRColors.white
     
     var body: some View {
         Text(self.text)
             .font(.custom("SFProText-Medium", size: self.fontSize))
             .fixedSize(horizontal: false, vertical: true)
+            .foregroundColor(self.textColor)
     }
 }
 

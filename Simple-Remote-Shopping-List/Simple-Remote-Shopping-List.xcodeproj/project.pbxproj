@@ -222,9 +222,9 @@
 			isa = PBXGroup;
 			children = (
 				572AEEC629A039E700A011E7 /* Models */,
-				572AEEC229A0396100A011E7 /* Components */,
 				572AEEC129A0394A00A011E7 /* ViewModels */,
 				572AEEC029A0393F00A011E7 /* Views */,
+				572AEEC229A0396100A011E7 /* Components */,
 				572AEEC329A0398500A011E7 /* Extensions */,
 				57C5CF3B298EF0AE005957DE /* Info.plist */,
 				57C5CF2B298EED7B005957DE /* GoogleService-Info.plist */,
