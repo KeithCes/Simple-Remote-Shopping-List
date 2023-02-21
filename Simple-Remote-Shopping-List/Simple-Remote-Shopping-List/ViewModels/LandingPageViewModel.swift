@@ -18,16 +18,10 @@ final class LandingPageViewModel: ObservableObject {
     @Published var selectedShoppingList: ShoppingList?
     
     @Published var isShowingEditShoppingList: Bool = false
+    @Published var isShowingSettings: Bool = false
     @Published var isProgressViewHidden: Bool = false
     
-    @Published var isUserLoggedOut: Bool = false
-    
     // MARK: - Methods
-    
-    func logoutUser() {
-        try! Auth.auth().signOut()
-        self.isUserLoggedOut.toggle()
-    }
     
     func getYourLists() {
         

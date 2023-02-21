@@ -29,18 +29,18 @@ class LandingViewUITests: XCTestCase {
         XCTAssert(app.buttons["SAVE"].exists)
     }
     
-    func testLogoutButton() throws {
+    func testSettingsButton() throws {
         let app = XCUIApplication()
         app.launchArguments += ["-TestUserLoggedIn"]
         app.launch()
         
         // tap logout button
-        let logoutButton = app.buttons["logoutButton"]
-        XCTAssert(logoutButton.exists)
-        logoutButton.tap()
+        let settingsButton = app.buttons["settingsButton"]
+        XCTAssert(settingsButton.exists)
+        settingsButton.tap()
         sleep(3)
         
         // check login button exists (we logged out successfully)
-        XCTAssert(app.buttons["LOGIN"].exists)
+        XCTAssert(app.buttons["logoutButton"].exists)
     }
 }

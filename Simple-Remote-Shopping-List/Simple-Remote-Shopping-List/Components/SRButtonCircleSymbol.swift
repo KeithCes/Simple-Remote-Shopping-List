@@ -11,7 +11,7 @@ import SwiftUI
 // circle button with SF symbol inside; need accessibiltyID for uitesting
 struct SRButtonCircleSymbol: View {
     var symbolName: String
-    var accessibilityID: String
+    var accessibilityID: String = ""
     
     var clicked: (() -> Void)
     

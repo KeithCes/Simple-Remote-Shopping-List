@@ -32,7 +32,7 @@ struct LoginView: View {
                     viewModel.login()
                 }
             
-            SRButton(text: "LOGIN") {
+            SRButton(text: "LOGIN", accessibilityID: "loginButton") {
                 viewModel.login()
             }
             

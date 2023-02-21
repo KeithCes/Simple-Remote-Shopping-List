@@ -10,6 +10,9 @@
 		572AEEBD29A0366C00A011E7 /* LandingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */; };
 		572AEEBF29A036A200A011E7 /* PrelogViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */; };
 		572AEECD29A11C1700A011E7 /* SRButtonCircleSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 572AEECC29A11C1700A011E7 /* SRButtonCircleSymbol.swift */; };
+		576A276129A55BCE00C2D44C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A276029A55BCE00C2D44C /* SettingsView.swift */; };
+		576A276329A55BE100C2D44C /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A276229A55BE100C2D44C /* SettingsViewModel.swift */; };
+		576A276529A56E2000C2D44C /* SRPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A276429A56E2000C2D44C /* SRPopupView.swift */; };
 		57B658F5299FE02100C6070C /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F4299FE02100C6070C /* FirebaseAuth */; };
 		57B658F7299FE02400C6070C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 57B658F6299FE02400C6070C /* FirebaseDatabase */; };
 		57C5CEF3298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */; };
@@ -69,6 +72,9 @@
 		572AEEBC29A0366C00A011E7 /* LandingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewUITests.swift; sourceTree = "<group>"; };
 		572AEEBE29A036A200A011E7 /* PrelogViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrelogViewUITests.swift; sourceTree = "<group>"; };
 		572AEECC29A11C1700A011E7 /* SRButtonCircleSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRButtonCircleSymbol.swift; sourceTree = "<group>"; };
+		576A276029A55BCE00C2D44C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		576A276229A55BE100C2D44C /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		576A276429A56E2000C2D44C /* SRPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SRPopupView.swift; sourceTree = "<group>"; };
 		57C5CEEF298ED73E005957DE /* Simple-Remote-Shopping-List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple-Remote-Shopping-List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57C5CEF2298ED73E005957DE /* Simple_Remote_Shopping_ListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Simple_Remote_Shopping_ListApp.swift; sourceTree = "<group>"; };
 		57C5CEF6298ED742005957DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 				57C5CF4E29918DB6005957DE /* LandingPageView.swift */,
 				57C5CF3C298EF139005957DE /* CreateAccountView.swift */,
 				57C5CF46298EF541005957DE /* LoginView.swift */,
+				576A276029A55BCE00C2D44C /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +163,7 @@
 				57C5CF5029918DF2005957DE /* LandingPageViewModel.swift */,
 				57C5CF44298EF2D1005957DE /* CreateAccountViewModel.swift */,
 				57C5CF48298EF5B8005957DE /* LoginViewModel.swift */,
+				576A276229A55BE100C2D44C /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -169,6 +177,7 @@
 				57C5CF3E298EF196005957DE /* SRTextbox.swift */,
 				57C5CF40298EF1ED005957DE /* SRPasswordTextbox.swift */,
 				57C5CF42298EF221005957DE /* SRText.swift */,
+				576A276429A56E2000C2D44C /* SRPopupView.swift */,
 				57C5CF4A298EF5FA005957DE /* Toast.swift */,
 			);
 			path = Components;
@@ -415,6 +424,7 @@
 			files = (
 				57C5CF38298EF017005957DE /* Color+Hexcode.swift in Sources */,
 				57C5CF36298EEFD7005957DE /* SRColors.swift in Sources */,
+				576A276529A56E2000C2D44C /* SRPopupView.swift in Sources */,
 				57C5CF32298EEF24005957DE /* PrelogViewModel.swift in Sources */,
 				57C5CF3D298EF139005957DE /* CreateAccountView.swift in Sources */,
 				57C5CF5729947694005957DE /* ShoppingList.swift in Sources */,
@@ -422,6 +432,8 @@
 				57C5CF5B299493E4005957DE /* Encodable+dictionary.swift in Sources */,
 				57C5CF3F298EF196005957DE /* SRTextbox.swift in Sources */,
 				57C5CF47298EF541005957DE /* LoginView.swift in Sources */,
+				576A276129A55BCE00C2D44C /* SettingsView.swift in Sources */,
+				576A276329A55BE100C2D44C /* SettingsViewModel.swift in Sources */,
 				57C5CF592994906C005957DE /* ShoppingListItem.swift in Sources */,
 				572AEECD29A11C1700A011E7 /* SRButtonCircleSymbol.swift in Sources */,
 				57C5CF4F29918DB7005957DE /* LandingPageView.swift in Sources */,

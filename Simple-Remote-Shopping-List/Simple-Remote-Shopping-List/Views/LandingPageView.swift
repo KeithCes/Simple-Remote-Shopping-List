@@ -62,10 +62,10 @@ struct LandingPageView: View {
             
             Spacer()
             
-            // MARK: - Logout and Create List Buttons
+            // MARK: - Settings and Create List Buttons
             HStack {
-                SRButtonCircleSymbol(symbolName: "rectangle.portrait.and.arrow.right", accessibilityID: "logoutButton") {
-                    viewModel.logoutUser()
+                SRButtonCircleSymbol(symbolName: "gear", accessibilityID: "settingsButton") {
+                    viewModel.isShowingSettings.toggle()
                 }
                 .padding(.leading, 16)
                 
@@ -95,8 +95,8 @@ struct LandingPageView: View {
             EditShoppingListView(isShowingCreateNewList: $viewModel.isShowingEditShoppingList,
                                  selectedShoppingList: $viewModel.selectedShoppingList)
         }
-        .fullScreenCover(isPresented: $viewModel.isUserLoggedOut) {
-            PrelogView()
+        .fullScreenCover(isPresented: $viewModel.isShowingSettings) {
+            SettingsView(isShowingSettings: $viewModel.isShowingSettings)
         }
         .onAppear{
             // force hide progress view during uitest

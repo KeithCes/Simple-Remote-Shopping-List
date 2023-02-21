@@ -45,12 +45,12 @@ class PrelogViewUITests: XCTestCase {
         passwordTextField.typeText("testtest")
         
         // tap login button
-        let loginButton = app.buttons["LOGIN"].firstMatch
+        let loginButton = app.buttons["loginButton"].firstMatch
         XCTAssert(loginButton.exists)
         loginButton.tap()
         sleep(3)
         
-        let logoutButton = app.buttons["logoutButton"]
-        XCTAssert(logoutButton.exists)
+        let settingsButton = app.buttons["settingsButton"]
+        XCTAssert(settingsButton.exists)
     }
 }

@@ -11,6 +11,7 @@ import SwiftUI
 // general use text button for views
 struct SRButton: View {
     var text: String
+    var accessibilityID: String = ""
     
     var clicked: (() -> Void)
     
@@ -28,6 +29,7 @@ struct SRButton: View {
                 )
                 .padding(.horizontal, 20)
         }
+        .accessibilityIdentifier(self.accessibilityID)
     }
 }
 
