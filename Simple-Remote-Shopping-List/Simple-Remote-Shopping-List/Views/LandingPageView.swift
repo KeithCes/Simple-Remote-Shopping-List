@@ -12,7 +12,7 @@ struct LandingPageView: View {
     
     @StateObject private var viewModel = LandingPageViewModel()
     
-    
+
     var body: some View {
         VStack {
             
